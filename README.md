@@ -18,3 +18,15 @@ The users will be able to create accounts and track their cart/orders, or simply
 View the live project [Placeholder!](https://github.com/Natte2110/CI-Milestone-04)
 
 ---
+
+## Table of Contents
+1. [**UX**](#ux)
+    - [**User Stories**](#user-stories)
+    - [**Design**](#design)
+        - [**Color Scheme**](#color-scheme)
+        - [**Imagery**](#imagery)
+        - [**Typography**](#typography)
+    - [**Wireframes**](#wireframes)
+    - [**Database Design**](#database-design)
+
+---
