@@ -115,3 +115,11 @@ The images of the products will all follow the same theme and style to ensure co
 The main font that will be seen across the site is [Oswald](https://fonts.google.com/specimen/Oswald).
 
 A fall-back font of sans-serif will be used upon failure to load the main font style.
+
+### Wireframes
+
+#### Home Page
+
+<div align=center>
+<img src="./design/wireframes/home-page.png" >
+</div>
