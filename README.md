@@ -121,5 +121,13 @@ A fall-back font of sans-serif will be used upon failure to load the main font s
 #### Home Page
 
 <div align=center>
-<img src="./design/wireframes/home-page.png" >
+    <img src="./design/wireframes/home-page.png" >
+</div>
+
+<div align=center>
+    <img src="./design/wireframes/all-products.png" >
+</div>
+
+<div align=center>
+    <img src="./design/wireframes/build-you-own.png" >
 </div>
