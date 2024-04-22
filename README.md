@@ -133,3 +133,13 @@ A fall-back font of sans-serif will be used upon failure to load the main font s
 <div align=center>
     <img src="./design/wireframes/build-you-own.png" >
 </div>
+
+### Database Design
+
+This entity relationship diagram represents the relationships users, products and all additional information to be captured alongside them.
+
+As different PC parts will require different technical paramaters, class inheritence was used in this diagram to represent fields that will be present for each product, as well as the specific required technical fields for each type of PC Component.
+
+<div align=center>
+    <img src="./design/database-erd.png" >
+</div>
