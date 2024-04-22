@@ -120,16 +120,30 @@ A fall-back font of sans-serif will be used upon failure to load the main font s
 
 #### Home Page
 
+The home page will introduce a user to the site's main prupose, as well as providing easy navigation elements to all other pages within the site. Featured products will also be available on the home page to entice users to click on said products initially.
+
 <div align=center>
     <img src="./design/wireframes/home-page.png" >
 </div>
 
 #### All Products Page
+
+The all products page will have all products returned based on a filter. users can sort, filter and change which types of products show up on this page.
+
+The products will be in their own individual cards and laid on the page using the bootstrap grid system.
+
 <div align=center>
     <img src="./design/wireframes/all-products.png" >
 </div>
 
 #### Build Your Own Page
+
+The 'Build Your Own' page will be the main focus of the site, and will allow users to interactively build their own PC. 
+
+Users will be able to drag and drop products onto the PC in order of assembly. The products they chose will automatically update their cart so that they can purchase all of the required products, or pay a small fee at the end of building to have the PC built for them.
+
+When chosing parts for the PC, only parts that are compatible with the previously selected components will be available.
+
 <div align=center>
     <img src="./design/wireframes/build-you-own.png" >
 </div>
