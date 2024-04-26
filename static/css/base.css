@@ -12,9 +12,9 @@ html {
 }
 
 body {
-    /* background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed; */
+    background: url('/static/media/background.png') no-repeat center center fixed;
     background-size: cover;
-    height: calc(100vh - 164px);
+    height: 100vh;
     color: #555;
     font-family: 'Oswald';
 }
@@ -23,7 +23,7 @@ body {
 
 #topbar {
     background-color: black;
-    height: 32px;
+    height: 2rem;
     color: var(--text-color);
 }
 
