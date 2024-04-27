@@ -6,7 +6,6 @@
 }
 
 .deals {
-    height: 400px;
     background: linear-gradient(90deg, rgb(13, 13, 13) 0, rgb(30, 30, 30) 90%, rgb(40, 40, 40) 100%);
 }
 
@@ -29,4 +28,49 @@
 
 .deals-link:hover {
     
+}
+
+.main-card {
+    height: 30vh;
+    background: linear-gradient(90deg, rgb(13, 13, 13) 0, rgb(30, 30, 30) 90%, rgb(40, 40, 40) 100%);
+    color: var(--text-color);
+}
+
+.main-card a {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+
+.main-card a:hover {
+    color: var(--text-color);
+}
+
+.main-card .row {
+    height: 100%;
+}
+
+.main-card-img{
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.main-card-text {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.main-card-img img{
+    
+    max-height: 100%;
+    margin: 0 auto;
+}
+
+.quick-nav a {
+    width: 100%;
+    padding: 1rem;
+    border: black solid 1px;
+    border-radius: 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
