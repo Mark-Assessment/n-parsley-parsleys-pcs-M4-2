@@ -32,6 +32,10 @@ body {
     font-size: 0.8rem;
 }
 
+#topbar .dropdown-menu {
+    background-color: #000;
+}
+
 .search-bar {
     display: flex;
     align-items: center;
@@ -100,4 +104,8 @@ body {
 
 .dropdown-menu a {
     font-size: 0.9rem;
+}
+
+.main-page-content {
+    margin-top: 5.5rem;
 }
