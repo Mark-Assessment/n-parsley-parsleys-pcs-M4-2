@@ -1,12 +1,33 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
 {% block page_header %}
 
 {% endblock %}
 
 {% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-1 col-lg-2">
 
+        </div>
+        <div class="col-10 col-lg-8 main-column">
+            <div class="deals">
+                <div class="deals-header d-flex p-3">
+                    <h3 class="text-uppercase mb-0">Current Deals</h3> 
+                    <p class="my-auto ml-4 font-weight-lighter d-none d-md-flex">The latest offers from Parsley's PCs</p>
+                    <a href="#" class="deals-link"><p>Explore Deals <i class="fa-solid fa-chevron-right"></i></p></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-1 col-lg-2">
+        </div>
+    </div>
+</div>
 {% endblock %}
 
 {% block postloadjs %}
