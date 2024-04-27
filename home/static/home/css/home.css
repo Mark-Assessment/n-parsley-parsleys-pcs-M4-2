@@ -1,0 +1,32 @@
+.main-column {
+    background-color: white;
+    padding: 1rem;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.deals {
+    height: 400px;
+    background: linear-gradient(90deg, rgb(13, 13, 13) 0, rgb(30, 30, 30) 90%, rgb(40, 40, 40) 100%);
+}
+
+.deals-header {
+    background: linear-gradient(90deg, var(--secondary-color) 0, var(--tertiary-color) 47%, var(--accent-2) 100%);
+    color: var(--text-color);
+}
+
+.deals-header h3 {
+    font-size: 1.5rem;
+}
+
+.deals-link {
+    float: right;
+    position: absolute;
+    right: 2rem;
+    color: var(--text-color);
+    padding: 0.1rem 0.5rem;
+}
+
+.deals-link:hover {
+    
+}
