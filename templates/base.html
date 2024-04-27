@@ -46,7 +46,10 @@
 <body>
     <header class="container-fluid fixed-top">
         <div class="row d-lg-flex" id="topbar">
-            <div class="col-6 col-lg-3 text-center">
+            <div class="d-none d-lg-flex col-1 col-lg-2">
+            
+            </div>
+            <div class="col-6 col-lg-2 pl-lg-0 pl-2 text-left">
                 <div class="dropdown">
                     <a href="#" role="button" id="currencyDropDown" data-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">
@@ -60,7 +63,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-6 d-none d-lg-flex">
+            <div class="col-4 d-none d-lg-flex">
                 <form method="GET" class="w-100" action="">
                     <div class="search-bar w-100">
                         <i class="fa-solid fa-magnifying-glass search-icon"></i>
@@ -70,7 +73,7 @@
                     </div>
                 </form>
             </div>
-            <div class="col-6 col-lg-3 text-center">
+            <div class="col-6 col-lg-2 pr-lg-0 pr-2 text-right">
 
                 <a href="#" role="button" id="accountDropDown" data-toggle="dropdown" aria-haspopup="true"
                     aria-expanded="false">
@@ -101,7 +104,9 @@
                 </a>
 
             </div>
-
+            <div class="d-none d-lg-flex col-1 col-lg-2">
+            
+            </div>
 
         </div>
         <div class="row">
@@ -109,7 +114,7 @@
                 <div class="d-none d-lg-flex col-1 col-lg-2">
             
                 </div>
-                <div class="col-8 col-lg-3 pl-0">
+                <div class="col-8 col-lg-3 pl-lg-0 pl-2">
                     <a href="{% url 'home' %}" class="nav-link logo-link pl-0">
                         <img class="logo-image " src="{% static 'media/logo-square.png' %}" alt="">
                         <h2 class="logo-title my-0 ml-2">
