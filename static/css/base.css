@@ -19,6 +19,38 @@ body {
     font-family: 'Oswald';
 }
 
+footer {
+    background-color: var(--primary-color);
+    
+    color: var(--text-color);
+    z-index: 2;
+}
+
+.page-footer a {
+    color: var(--text-color);
+    margin: 0 auto;
+    display: block;
+    font-weight: 300;
+}
+
+.page-footer p {
+    font-weight: 200;
+}
+
+.page-footer hr {
+    border-color: var(--text-color);
+}
+
+.footer-header{
+    margin-bottom: 1rem;
+}
+
+.footer-copyright{
+    background-color: black;
+    font-weight: 200;
+}
+
+
 #topbar {
     background-color: black;
     height: 2rem;
