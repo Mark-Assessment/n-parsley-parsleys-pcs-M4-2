@@ -10,6 +10,10 @@ class Brand(models.Model):
     image = models.ImageField(null=True, blank=True)
     is_featured = models.BooleanField(default=False)
 
+    class Meta:
+        verbose_name = "Brand"
+        verbose_name_plural = "Brands"
+
     def __str__(self):
         return self.name
 
@@ -19,6 +23,10 @@ class Category(models.Model):
     Class to define the Category Model
     """
     name = models.CharField(max_length=100, unique=True, null=False)
+
+    class Meta:
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
 
     def __str__(self):
         return self.name
@@ -42,6 +50,10 @@ class Product(models.Model):
     image = models.ImageField(null=True, blank=True)
     slug = models.SlugField(max_length=250, null=False, unique=True, blank=False)
 
+    class Meta:
+        verbose_name = "Product"
+        verbose_name_plural = "Products"
+
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
         super().save(*args, **kwargs)
@@ -56,6 +68,10 @@ class CPUSocket(models.Model):
     '''
     socket_type = models.CharField(max_length=32, null=False, blank=False)
 
+    class Meta:
+        verbose_name = "CPU Socket"
+        verbose_name_plural = "CPU Sockets"
+
     def __str__(self):
         return self.socket_type
 
@@ -66,6 +82,10 @@ class RAMTechnology(models.Model):
     '''
     technology_style = models.CharField(max_length=32, null=False, blank=False)
 
+    class Meta:
+        verbose_name = "RAM Technology"
+        verbose_name_plural = "RAM Technologies"
+
     def __str__(self):
         return self.technology_style
 
@@ -75,6 +95,10 @@ class FormFactor(models.Model):
     Class to define the form factor of a component
     '''
     style_name = models.CharField(max_length=32, null=False, blank=False)
+
+    class Meta:
+        verbose_name = "Form Factor"
+        verbose_name_plural = "Form Factors"
 
     def __str__(self):
         return self.style_name
@@ -89,6 +113,10 @@ class Motherboard(Product):
     cpu_socket = models.ForeignKey('CPUSocket', on_delete=models.CASCADE)
     memory_clock_speed = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False)
 
+    class Meta:
+        verbose_name = "Motherboard"
+        verbose_name_plural = "Motherboards"
+
 
 class CPU(Product):
     '''
@@ -102,6 +130,10 @@ class CPU(Product):
     processor_count = models.IntegerField(null=False, blank=False)
     cores = models.IntegerField(null=False, blank=False)
 
+    class Meta:
+        verbose_name = "CPU"
+        verbose_name_plural = "CPUs"
+
 
 class RAM(Product):
     '''
@@ -112,6 +144,10 @@ class RAM(Product):
     no_sticks = models.IntegerField(null=False, blank=False)
     memory_speed = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False)
 
+    class Meta:
+        verbose_name = "RAM"
+        verbose_name_plural = "RAM"
+
 
 class PSU(Product):
     '''
@@ -119,6 +155,10 @@ class PSU(Product):
     '''
     form_factor = models.ForeignKey('FormFactor', on_delete=models.CASCADE)
     wattage = models.IntegerField(null=False, blank=False)
+
+    class Meta:
+        verbose_name = "PSU"
+        verbose_name_plural = "PSUs"
 
 
 class GPU(Product):
@@ -129,3 +169,7 @@ class GPU(Product):
     clock_speed = models.IntegerField(null=False, blank=False)
     g_ram_size = models.IntegerField(null=False, blank=False)
     video_interface = models.CharField(max_length=32, null=False, blank=False)
+
+    class Meta:
+        verbose_name = "GPU"
+        verbose_name_plural = "GPUs"
