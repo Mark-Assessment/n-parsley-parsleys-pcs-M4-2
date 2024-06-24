@@ -52,14 +52,21 @@
             <div class="col-6 col-lg-2 pl-lg-0 pl-2 text-left">
                 <div class="dropdown">
                     <a href="#" role="button" id="currencyDropDown" data-toggle="dropdown" aria-haspopup="true"
-                        aria-expanded="false">
-                        <i class="fa-solid fa-sterling-sign"></i> GBP <i class="fa-solid fa-chevron-down"></i>
+                       aria-expanded="false">
+                        {% if request.session.currency == 'USD' %}
+                            <i class="fa-solid fa-dollar-sign"></i> USD
+                        {% elif request.session.currency == 'EUR' %}
+                            <i class="fa-solid fa-euro-sign"></i> EUR
+                        {% else %}
+                            <i class="fa-solid fa-sterling-sign"></i> GBP
+                        {% endif %}
+                        <i class="fa-solid fa-chevron-down"></i>
                     </a>
-
+    
                     <div class="dropdown-menu" aria-labelledby="currencyDropDown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="{% url 'set_currency' 'GBP' %}">GBP</a>
+                        <a class="dropdown-item" href="{% url 'set_currency' 'USD' %}">USD</a>
+                        <a class="dropdown-item" href="{% url 'set_currency' 'EUR' %}">EUR</a>
                     </div>
                 </div>
             </div>
