@@ -101,12 +101,24 @@
                 </div>
 
 
-                <a href="#" class="ml-4" role="button">
+                <a href="{% url 'cart_detail' %}" class="ml-4" role="button">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    {% if grand_total %}
-                    £{{ grand_total|floatformat:2 }}
+                    {% if request.cart_total %}
+                        {% if request.session.currency == 'USD' %}
+                            ${{ request.cart_total|floatformat:2 }}
+                        {% elif request.session.currency == 'EUR' %}
+                            €{{ request.cart_total|floatformat:2 }}
+                        {% else %}
+                            £{{ request.cart_total|floatformat:2 }}
+                        {% endif %}
                     {% else %}
-                    £0.00
+                        {% if request.session.currency == 'USD' %}
+                            $0.00
+                        {% elif request.session.currency == 'EUR' %}
+                            €0.00
+                        {% else %}
+                            £0.00
+                        {% endif %}
                     {% endif %}
                 </a>
 
