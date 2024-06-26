@@ -13,8 +13,7 @@
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-1 col-lg-2">
-        </div>
+        <div class="col-1 col-lg-2"></div>
         <div class="col-10 col-lg-8 main-column">
             <form method="get" class="mb-4">
                 <div class="form-row">
@@ -44,6 +43,10 @@
                         {{ form.brand.label_tag }}
                         {{ form.brand }}
                     </div>
+                    <div class="col-md-3 mb-3">
+                        {{ form.sort_by.label_tag }}
+                        {{ form.sort_by }}
+                    </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Filter</button>
             </form>
@@ -63,8 +66,7 @@
                 {% endfor %}
             </div>
         </div>
-        <div class="col-1 col-lg-2">
-        </div>
+        <div class="col-1 col-lg-2"></div>
     </div>
 </div>
 {% endblock %}
