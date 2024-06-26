@@ -49,6 +49,7 @@ class Product(models.Model):
     image_url = models.URLField(max_length=2000, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
     slug = models.SlugField(max_length=250, null=False, unique=True, blank=False)
+    rating = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True)
 
     class Meta:
         verbose_name = "Product"
