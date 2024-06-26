@@ -174,3 +174,31 @@ class GPU(Product):
     class Meta:
         verbose_name = "GPU"
         verbose_name_plural = "GPUs"
+
+class Case(Product):
+    '''
+    Class to define extra product information for cases
+    '''
+    form_factor = models.ForeignKey('FormFactor', on_delete=models.CASCADE)
+    has_rgb = models.BooleanField(default=False)
+    max_gpu_length = models.IntegerField(null=False, blank=False)
+    max_cpu_cooler_height = models.IntegerField(null=False, blank=False)
+    max_psu_length = models.IntegerField(null=False, blank=False)
+
+    class Meta:
+        verbose_name = "Case"
+        verbose_name_plural = "Cases"
+
+
+class Storage(Product):
+    '''
+    Class to define extra product information for storage
+    '''
+    storage_type = models.CharField(max_length=32, null=False, blank=False)  # e.g., SSD, HDD
+    capacity = models.IntegerField(null=False, blank=False)  # in GB
+    read_speed = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)  # in MB/s
+    write_speed = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)  # in MB/s
+
+    class Meta:
+        verbose_name = "Storage"
+        verbose_name_plural = "Storage"
