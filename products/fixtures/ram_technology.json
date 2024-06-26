@@ -1,0 +1,58 @@
+[
+    {
+        "model": "products.ramtechnology",
+        "pk": 1,
+        "fields": {
+            "technology_style": "DDR"
+        }
+    },
+    {
+        "model": "products.ramtechnology",
+        "pk": 2,
+        "fields": {
+            "technology_style": "DDR2"
+        }
+    },
+    {
+        "model": "products.ramtechnology",
+        "pk": 3,
+        "fields": {
+            "technology_style": "DDR3"
+        }
+    },
+    {
+        "model": "products.ramtechnology",
+        "pk": 4,
+        "fields": {
+            "technology_style": "DDR4"
+        }
+    },
+    {
+        "model": "products.ramtechnology",
+        "pk": 5,
+        "fields": {
+            "technology_style": "DDR5"
+        }
+    },
+    {
+        "model": "products.ramtechnology",
+        "pk": 6,
+        "fields": {
+            "technology_style": "GDDR5"
+        }
+    },
+    {
+        "model": "products.ramtechnology",
+        "pk": 7,
+        "fields": {
+            "technology_style": "GDDR6"
+        }
+    },
+    {
+        "model": "products.ramtechnology",
+        "pk": 8,
+        "fields": {
+            "technology_style": "GDDR6X"
+        }
+    }
+]

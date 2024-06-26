@@ -1,0 +1,58 @@
+[
+    {
+        "model": "products.formfactor",
+        "pk": 1,
+        "fields": {
+            "style_name": "ATX"
+        }
+    },
+    {
+        "model": "products.formfactor",
+        "pk": 2,
+        "fields": {
+            "style_name": "Micro-ATX"
+        }
+    },
+    {
+        "model": "products.formfactor",
+        "pk": 3,
+        "fields": {
+            "style_name": "Mini-ITX"
+        }
+    },
+    {
+        "model": "products.formfactor",
+        "pk": 4,
+        "fields": {
+            "style_name": "E-ATX"
+        }
+    },
+    {
+        "model": "products.formfactor",
+        "pk": 5,
+        "fields": {
+            "style_name": "XL-ATX"
+        }
+    },
+    {
+        "model": "products.formfactor",
+        "pk": 6,
+        "fields": {
+            "style_name": "Flex-ATX"
+        }
+    },
+    {
+        "model": "products.formfactor",
+        "pk": 7,
+        "fields": {
+            "style_name": "SSI-CEB"
+        }
+    },
+    {
+        "model": "products.formfactor",
+        "pk": 8,
+        "fields": {
+            "style_name": "SSI-EEB"
+        }
+    }
+]

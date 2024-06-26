@@ -1,0 +1,342 @@
+[
+    {
+        "model": "products.product",
+        "pk": 1,
+        "fields": {
+            "category": 2,
+            "brand": 1,
+            "sku": "INTEL-I7-10700K",
+            "name": "Intel Core i7-10700K",
+            "description": "8 cores, 16 threads, base clock 3.8GHz, boost clock 5.1GHz",
+            "available_quantity": 50,
+            "price": "349.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "intel-core-i7-10700k",
+            "rating": 4.5
+        }
+    },
+    {
+        "model": "products.cpu",
+        "pk": 1,
+        "fields": {
+            "product_ptr": 1,
+            "cpu_socket": 1,
+            "cpu_speed": 3.8,
+            "secondary_cache": 256,
+            "cache": 1024,
+            "wattage": 125,
+            "processor_count": 1,
+            "cores": 8
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 2,
+        "fields": {
+            "category": 2,
+            "brand": 1,
+            "sku": "INTEL-I9-10900K",
+            "name": "Intel Core i9-10900K",
+            "description": "10 cores, 20 threads, base clock 3.7GHz, boost clock 5.3GHz",
+            "available_quantity": 40,
+            "price": "499.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "intel-core-i9-10900k",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.cpu",
+        "pk": 2,
+        "fields": {
+            "product_ptr": 2,
+            "cpu_socket": 2,
+            "cpu_speed": 3.7,
+            "secondary_cache": 512,
+            "cache": 2048,
+            "wattage": 125,
+            "processor_count": 1,
+            "cores": 10
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 3,
+        "fields": {
+            "category": 2,
+            "brand": 2,
+            "sku": "AMD-RYZEN-5-3600X",
+            "name": "AMD Ryzen 5 3600X",
+            "description": "6 cores, 12 threads, base clock 3.8GHz, boost clock 4.4GHz",
+            "available_quantity": 60,
+            "price": "249.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": false,
+            "image_url": "",
+            "image": "",
+            "slug": "amd-ryzen-5-3600x",
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "products.cpu",
+        "pk": 3,
+        "fields": {
+            "product_ptr": 3,
+            "cpu_socket": 3,
+            "cpu_speed": 3.8,
+            "secondary_cache": 256,
+            "cache": 1024,
+            "wattage": 95,
+            "processor_count": 1,
+            "cores": 6
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 4,
+        "fields": {
+            "category": 2,
+            "brand": 2,
+            "sku": "AMD-RYZEN-9-3900X",
+            "name": "AMD Ryzen 9 3900X",
+            "description": "12 cores, 24 threads, base clock 3.8GHz, boost clock 4.6GHz",
+            "available_quantity": 30,
+            "price": "499.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "amd-ryzen-9-3900x",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.cpu",
+        "pk": 4,
+        "fields": {
+            "product_ptr": 4,
+            "cpu_socket": 3,
+            "cpu_speed": 3.8,
+            "secondary_cache": 512,
+            "cache": 2048,
+            "wattage": 105,
+            "processor_count": 1,
+            "cores": 12
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 5,
+        "fields": {
+            "category": 2,
+            "brand": 1,
+            "sku": "INTEL-I5-10400F",
+            "name": "Intel Core i5-10400F",
+            "description": "6 cores, 12 threads, base clock 2.9GHz, boost clock 4.3GHz",
+            "available_quantity": 70,
+            "price": "179.99",
+            "is_discounted": true,
+            "discount_price": "159.99",
+            "is_featured": false,
+            "image_url": "",
+            "image": "",
+            "slug": "intel-core-i5-10400f",
+            "rating": 4.4
+        }
+    },
+    {
+        "model": "products.cpu",
+        "pk": 5,
+        "fields": {
+            "product_ptr": 5,
+            "cpu_socket": 2,
+            "cpu_speed": 2.9,
+            "secondary_cache": 256,
+            "cache": 1024,
+            "wattage": 65,
+            "processor_count": 1,
+            "cores": 6
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 6,
+        "fields": {
+            "category": 2,
+            "brand": 1,
+            "sku": "INTEL-I3-10100",
+            "name": "Intel Core i3-10100",
+            "description": "4 cores, 8 threads, base clock 3.6GHz, boost clock 4.3GHz",
+            "available_quantity": 80,
+            "price": "129.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": false,
+            "image_url": "",
+            "image": "",
+            "slug": "intel-core-i3-10100",
+            "rating": 4.3
+        }
+    },
+    {
+        "model": "products.cpu",
+        "pk": 6,
+        "fields": {
+            "product_ptr": 6,
+            "cpu_socket": 2,
+            "cpu_speed": 3.6,
+            "secondary_cache": 128,
+            "cache": 512,
+            "wattage": 65,
+            "processor_count": 1,
+            "cores": 4
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 7,
+        "fields": {
+            "category": 2,
+            "brand": 2,
+            "sku": "AMD-RYZEN-7-3700X",
+            "name": "AMD Ryzen 7 3700X",
+            "description": "8 cores, 16 threads, base clock 3.6GHz, boost clock 4.4GHz",
+            "available_quantity": 50,
+            "price": "329.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "amd-ryzen-7-3700x",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.cpu",
+        "pk": 7,
+        "fields": {
+            "product_ptr": 7,
+            "cpu_socket": 3,
+            "cpu_speed": 3.6,
+            "secondary_cache": 256,
+            "cache": 1024,
+            "wattage": 65,
+            "processor_count": 1,
+            "cores": 8
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 8,
+        "fields": {
+            "category": 2,
+            "brand": 2,
+            "sku": "AMD-RYZEN-5-5600X",
+            "name": "AMD Ryzen 5 5600X",
+            "description": "6 cores, 12 threads, base clock 3.7GHz, boost clock 4.6GHz",
+            "available_quantity": 40,
+            "price": "299.99",
+            "is_discounted": true,
+            "discount_price": "279.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "amd-ryzen-5-5600x",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.cpu",
+        "pk": 8,
+        "fields": {
+            "product_ptr": 8,
+            "cpu_socket": 3,
+            "cpu_speed": 3.7,
+            "secondary_cache": 256,
+            "cache": 1024,
+            "wattage": 65,
+            "processor_count": 1,
+            "cores": 6
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 9,
+        "fields": {
+            "category": 2,
+            "brand": 1,
+            "sku": "INTEL-XEON-E-2236",
+            "name": "Intel Xeon E-2236",
+            "description": "6 cores, 12 threads, base clock 3.4GHz, boost clock 4.8GHz",
+            "available_quantity": 20,
+            "price": "389.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": false,
+            "image_url": "",
+            "image": "",
+            "slug": "intel-xeon-e-2236",
+            "rating": 4.5
+        }
+    },
+    {
+        "model": "products.cpu",
+        "pk": 9,
+        "fields": {
+            "product_ptr": 9,
+            "cpu_socket": 8,
+            "cpu_speed": 3.4,
+            "secondary_cache": 256,
+            "cache": 1024,
+            "wattage": 80,
+            "processor_count": 1,
+            "cores": 6
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 10,
+        "fields": {
+            "category": 2,
+            "brand": 2,
+            "sku": "AMD-RYZEN-THREADRIPPER-3990X",
+            "name": "AMD Ryzen Threadripper 3990X",
+            "description": "64 cores, 128 threads, base clock 2.9GHz, boost clock 4.3GHz",
+            "available_quantity": 5,
+            "price": "3999.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "amd-ryzen-threadripper-3990x",
+            "rating": 4.9
+        }
+    },
+    {
+        "model": "products.cpu",
+        "pk": 10,
+        "fields": {
+            "product_ptr": 10,
+            "cpu_socket": 5,
+            "cpu_speed": 2.9,
+            "secondary_cache": 1024,
+            "cache": 4096,
+            "wattage": 280,
+            "processor_count": 1,
+            "cores": 64
+        }
+    }
+]

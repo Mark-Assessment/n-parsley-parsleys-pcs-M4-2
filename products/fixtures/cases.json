@@ -1,0 +1,322 @@
+[
+    {
+        "model": "products.product",
+        "pk": 51,
+        "fields": {
+            "category": 6,
+            "brand": 4,
+            "sku": "CORSAIR-4000D-AIRFLOW",
+            "name": "Corsair 4000D Airflow",
+            "description": "Mid-Tower ATX, High-Airflow, Tempered Glass",
+            "available_quantity": 30,
+            "price": "94.99",
+            "is_discounted": true,
+            "discount_price": "89.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-4000d-airflow",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.case",
+        "pk": 1,
+        "fields": {
+            "product_ptr": 51,
+            "form_factor": 1,
+            "has_rgb": false,
+            "max_gpu_length": 360,
+            "max_cpu_cooler_height": 170,
+            "max_psu_length": 180
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 52,
+        "fields": {
+            "category": 6,
+            "brand": 6,
+            "sku": "NZXT-H510",
+            "name": "NZXT H510",
+            "description": "Mid-Tower ATX, Tempered Glass, Compact ATX Case",
+            "available_quantity": 25,
+            "price": "69.99",
+            "is_discounted": true,
+            "discount_price": "64.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "nzxt-h510",
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "products.case",
+        "pk": 2,
+        "fields": {
+            "product_ptr": 52,
+            "form_factor": 1,
+            "has_rgb": false,
+            "max_gpu_length": 380,
+            "max_cpu_cooler_height": 165,
+            "max_psu_length": 200
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 53,
+        "fields": {
+            "category": 6,
+            "brand": 7,
+            "sku": "LIAN-LI-PC-O11-DYNAMIC",
+            "name": "Lian Li PC-O11 Dynamic",
+            "description": "Mid-Tower ATX, Tempered Glass, Dual Chamber",
+            "available_quantity": 20,
+            "price": "129.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "lian-li-pc-o11-dynamic",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.case",
+        "pk": 3,
+        "fields": {
+            "product_ptr": 53,
+            "form_factor": 1,
+            "has_rgb": false,
+            "max_gpu_length": 420,
+            "max_cpu_cooler_height": 167,
+            "max_psu_length": 210
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 54,
+        "fields": {
+            "category": 6,
+            "brand": 5,
+            "sku": "MSI-MAG-FORGE-100R",
+            "name": "MSI MAG Forge 100R",
+            "description": "Mid-Tower ATX, Tempered Glass, Dual RGB Fans",
+            "available_quantity": 35,
+            "price": "79.99",
+            "is_discounted": true,
+            "discount_price": "74.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "msi-mag-forge-100r",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.case",
+        "pk": 4,
+        "fields": {
+            "product_ptr": 54,
+            "form_factor": 1,
+            "has_rgb": true,
+            "max_gpu_length": 330,
+            "max_cpu_cooler_height": 160,
+            "max_psu_length": 180
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 55,
+        "fields": {
+            "category": 6,
+            "brand": 5,
+            "sku": "MSI-MAG-VAMPIRIC-010",
+            "name": "MSI MAG Vampiric 010",
+            "description": "Mid-Tower ATX, Tempered Glass, RGB Lighting",
+            "available_quantity": 30,
+            "price": "89.99",
+            "is_discounted": true,
+            "discount_price": "84.99",
+            "is_featured": false,
+            "image_url": "",
+            "image": "",
+            "slug": "msi-mag-vampiric-010",
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "products.case",
+        "pk": 5,
+        "fields": {
+            "product_ptr": 55,
+            "form_factor": 1,
+            "has_rgb": true,
+            "max_gpu_length": 350,
+            "max_cpu_cooler_height": 170,
+            "max_psu_length": 200
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 56,
+        "fields": {
+            "category": 6,
+            "brand": 4,
+            "sku": "CORSAIR-275R-AIRFLOW",
+            "name": "Corsair 275R Airflow",
+            "description": "Mid-Tower ATX, High-Airflow, Tempered Glass",
+            "available_quantity": 25,
+            "price": "84.99",
+            "is_discounted": true,
+            "discount_price": "79.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-275r-airflow",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.case",
+        "pk": 6,
+        "fields": {
+            "product_ptr": 56,
+            "form_factor": 1,
+            "has_rgb": false,
+            "max_gpu_length": 370,
+            "max_cpu_cooler_height": 160,
+            "max_psu_length": 180
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 57,
+        "fields": {
+            "category": 6,
+            "brand": 6,
+            "sku": "NZXT-H510-ELITE",
+            "name": "NZXT H510 Elite",
+            "description": "Mid-Tower ATX, Tempered Glass, Smart Device V2",
+            "available_quantity": 20,
+            "price": "149.99",
+            "is_discounted": true,
+            "discount_price": "139.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "nzxt-h510-elite",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.case",
+        "pk": 7,
+        "fields": {
+            "product_ptr": 57,
+            "form_factor": 1,
+            "has_rgb": true,
+            "max_gpu_length": 380,
+            "max_cpu_cooler_height": 165,
+            "max_psu_length": 200
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 58,
+        "fields": {
+            "category": 6,
+            "brand": 5,
+            "sku": "MSI-MAG-CH120R",
+            "name": "MSI MAG CH120R",
+            "description": "Mid-Tower ATX, Tempered Glass, 4 RGB Fans",
+            "available_quantity": 25,
+            "price": "129.99",
+            "is_discounted": true,
+            "discount_price": "119.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "msi-mag-ch120r",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.case",
+        "pk": 8,
+        "fields": {
+            "product_ptr": 58,
+            "form_factor": 1,
+            "has_rgb": true,
+            "max_gpu_length": 370,
+            "max_cpu_cooler_height": 160,
+            "max_psu_length": 200
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 59,
+        "fields": {
+            "category": 6,
+            "brand": 7,
+            "sku": "LIAN-LI-LANCOOL-II",
+            "name": "Lian Li Lancool II",
+            "description": "Mid-Tower ATX, Tempered Glass, RGB Fans",
+            "available_quantity": 30,
+            "price": "94.99",
+            "is_discounted": true,
+            "discount_price": "89.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "lian-li-lancool-ii",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.case",
+        "pk": 9,
+        "fields": {
+            "product_ptr": 59,
+            "form_factor": 1,
+            "has_rgb": true,
+            "max_gpu_length": 400,
+            "max_cpu_cooler_height": 175,
+            "max_psu_length": 210
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 60,
+        "fields": {
+            "category": 6,
+            "brand": 6,
+            "sku": "NZXT-H710",
+            "name": "NZXT H710",
+            "description": "Mid-Tower ATX, Tempered Glass, Spacious Interior",
+            "available_quantity": 20,
+            "price": "169.99",
+            "is_discounted": true,
+            "discount_price": "159.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "nzxt-h710",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.case",
+        "pk": 10,
+        "fields": {
+            "product_ptr": 60,
+            "form_factor": 1,
+            "has_rgb": false,
+            "max_gpu_length": 413,
+            "max_cpu_cooler_height": 185,
+            "max_psu_length": 200
+        }
+    }
+]

@@ -1,0 +1,312 @@
+[
+    {
+        "model": "products.product",
+        "pk": 61,
+        "fields": {
+            "category": 7,
+            "brand": 8,
+            "sku": "SAMSUNG-970-EVO-PLUS-1TB",
+            "name": "Samsung 970 EVO Plus 1TB",
+            "description": "1TB NVMe M.2 SSD, Up to 3500 MB/s Read Speed",
+            "available_quantity": 40,
+            "price": "149.99",
+            "is_discounted": true,
+            "discount_price": "139.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "samsung-970-evo-plus-1tb",
+            "rating": 4.9
+        }
+    },
+    {
+        "model": "products.storage",
+        "pk": 1,
+        "fields": {
+            "product_ptr": 61,
+            "storage_type": "SSD",
+            "capacity": 1000,
+            "read_speed": 3500,
+            "write_speed": 3300
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 62,
+        "fields": {
+            "category": 7,
+            "brand": 8,
+            "sku": "SAMSUNG-860-EVO-1TB",
+            "name": "Samsung 860 EVO 1TB",
+            "description": "1TB SATA III SSD, Up to 550 MB/s Read Speed",
+            "available_quantity": 30,
+            "price": "119.99",
+            "is_discounted": true,
+            "discount_price": "109.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "samsung-860-evo-1tb",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.storage",
+        "pk": 2,
+        "fields": {
+            "product_ptr": 62,
+            "storage_type": "SSD",
+            "capacity": 1000,
+            "read_speed": 550,
+            "write_speed": 520
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 63,
+        "fields": {
+            "category": 7,
+            "brand": 8,
+            "sku": "SAMSUNG-870-QVO-2TB",
+            "name": "Samsung 870 QVO 2TB",
+            "description": "2TB SATA III SSD, Up to 560 MB/s Read Speed",
+            "available_quantity": 20,
+            "price": "199.99",
+            "is_discounted": true,
+            "discount_price": "179.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "samsung-870-qvo-2tb",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.storage",
+        "pk": 3,
+        "fields": {
+            "product_ptr": 63,
+            "storage_type": "SSD",
+            "capacity": 2000,
+            "read_speed": 560,
+            "write_speed": 530
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 64,
+        "fields": {
+            "category": 7,
+            "brand": 8,
+            "sku": "SAMSUNG-980-PRO-1TB",
+            "name": "Samsung 980 PRO 1TB",
+            "description": "1TB NVMe M.2 SSD, Up to 7000 MB/s Read Speed",
+            "available_quantity": 15,
+            "price": "229.99",
+            "is_discounted": true,
+            "discount_price": "219.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "samsung-980-pro-1tb",
+            "rating": 4.9
+        }
+    },
+    {
+        "model": "products.storage",
+        "pk": 4,
+        "fields": {
+            "product_ptr": 64,
+            "storage_type": "SSD",
+            "capacity": 1000,
+            "read_speed": 7000,
+            "write_speed": 5000
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 65,
+        "fields": {
+            "category": 7,
+            "brand": 4,
+            "sku": "CORSAIR-FORCE-MP600-1TB",
+            "name": "Corsair Force MP600 1TB",
+            "description": "1TB NVMe M.2 SSD, Up to 4950 MB/s Read Speed",
+            "available_quantity": 25,
+            "price": "179.99",
+            "is_discounted": true,
+            "discount_price": "169.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-force-mp600-1tb",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.storage",
+        "pk": 5,
+        "fields": {
+            "product_ptr": 65,
+            "storage_type": "SSD",
+            "capacity": 1000,
+            "read_speed": 4950,
+            "write_speed": 4250
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 66,
+        "fields": {
+            "category": 7,
+            "brand": 8,
+            "sku": "SAMSUNG-860-EVO-500GB",
+            "name": "Samsung 860 EVO 500GB",
+            "description": "500GB SATA III SSD, Up to 550 MB/s Read Speed",
+            "available_quantity": 40,
+            "price": "74.99",
+            "is_discounted": true,
+            "discount_price": "69.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "samsung-860-evo-500gb",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.storage",
+        "pk": 6,
+        "fields": {
+            "product_ptr": 66,
+            "storage_type": "SSD",
+            "capacity": 500,
+            "read_speed": 550,
+            "write_speed": 520
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 67,
+        "fields": {
+            "category": 7,
+            "brand": 8,
+            "sku": "SAMSUNG-970-EVO-500GB",
+            "name": "Samsung 970 EVO 500GB",
+            "description": "500GB NVMe M.2 SSD, Up to 3400 MB/s Read Speed",
+            "available_quantity": 35,
+            "price": "89.99",
+            "is_discounted": true,
+            "discount_price": "79.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "samsung-970-evo-500gb",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.storage",
+        "pk": 7,
+        "fields": {
+            "product_ptr": 67,
+            "storage_type": "SSD",
+            "capacity": 500,
+            "read_speed": 3400,
+            "write_speed": 2300
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 68,
+        "fields": {
+            "category": 7,
+            "brand": 9,
+            "sku": "WD-BLUE-1TB",
+            "name": "WD Blue 1TB",
+            "description": "1TB 7200 RPM SATA III HDD",
+            "available_quantity": 50,
+            "price": "49.99",
+            "is_discounted": true,
+            "discount_price": "44.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "wd-blue-1tb",
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "products.storage",
+        "pk": 8,
+        "fields": {
+            "product_ptr": 68,
+            "storage_type": "HDD",
+            "capacity": 1000,
+            "read_speed": 150,
+            "write_speed": 150
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 69,
+        "fields": {
+            "category": 7,
+            "brand": 9,
+            "sku": "WD-BLACK-2TB",
+            "name": "WD Black 2TB",
+            "description": "2TB 7200 RPM SATA III HDD",
+            "available_quantity": 40,
+            "price": "99.99",
+            "is_discounted": true,
+            "discount_price": "89.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "wd-black-2tb",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.storage",
+        "pk": 9,
+        "fields": {
+            "product_ptr": 69,
+            "storage_type": "HDD",
+            "capacity": 2000,
+            "read_speed": 150,
+            "write_speed": 150
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 70,
+        "fields": {
+            "category": 7,
+            "brand": 9,
+            "sku": "WD-BLUE-500GB",
+            "name": "WD Blue 500GB",
+            "description": "500GB 7200 RPM SATA III HDD",
+            "available_quantity": 60,
+            "price": "39.99",
+            "is_discounted": true,
+            "discount_price": "34.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "wd-blue-500gb",
+            "rating": 4.5
+        }
+    },
+    {
+        "model": "products.storage",
+        "pk": 10,
+        "fields": {
+            "product_ptr": 70,
+            "storage_type": "HDD",
+            "capacity": 500,
+            "read_speed": 150,
+            "write_speed": 150
+        }
+    }
+]

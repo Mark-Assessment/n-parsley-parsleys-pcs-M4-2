@@ -1,0 +1,312 @@
+[
+    {
+        "model": "products.product",
+        "pk": 21,
+        "fields": {
+            "category": 4,
+            "brand": 3,
+            "sku": "NVIDIA-RTX-3080",
+            "name": "NVIDIA GeForce RTX 3080",
+            "description": "10GB GDDR6X, 8704 CUDA Cores, 1.71 GHz Boost Clock",
+            "available_quantity": 20,
+            "price": "699.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "nvidia-geforce-rtx-3080",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.gpu",
+        "pk": 1,
+        "fields": {
+            "product_ptr": 21,
+            "g_ram_technology": "GDDR6X",
+            "clock_speed": 1710,
+            "g_ram_size": 10,
+            "video_interface": "PCIe 4.0"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 22,
+        "fields": {
+            "category": 4,
+            "brand": 3,
+            "sku": "NVIDIA-RTX-3070",
+            "name": "NVIDIA GeForce RTX 3070",
+            "description": "8GB GDDR6, 5888 CUDA Cores, 1.73 GHz Boost Clock",
+            "available_quantity": 25,
+            "price": "499.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "nvidia-geforce-rtx-3070",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.gpu",
+        "pk": 2,
+        "fields": {
+            "product_ptr": 22,
+            "g_ram_technology": "GDDR6",
+            "clock_speed": 1730,
+            "g_ram_size": 8,
+            "video_interface": "PCIe 4.0"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 23,
+        "fields": {
+            "category": 4,
+            "brand": 3,
+            "sku": "NVIDIA-RTX-3060",
+            "name": "NVIDIA GeForce RTX 3060",
+            "description": "12GB GDDR6, 3584 CUDA Cores, 1.78 GHz Boost Clock",
+            "available_quantity": 30,
+            "price": "329.99",
+            "is_discounted": true,
+            "discount_price": "299.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "nvidia-geforce-rtx-3060",
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "products.gpu",
+        "pk": 3,
+        "fields": {
+            "product_ptr": 23,
+            "g_ram_technology": "GDDR6",
+            "clock_speed": 1780,
+            "g_ram_size": 12,
+            "video_interface": "PCIe 4.0"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 24,
+        "fields": {
+            "category": 4,
+            "brand": 2,
+            "sku": "AMD-RX-6800XT",
+            "name": "AMD Radeon RX 6800 XT",
+            "description": "16GB GDDR6, 4608 Stream Processors, 2.25 GHz Boost Clock",
+            "available_quantity": 15,
+            "price": "649.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "amd-radeon-rx-6800-xt",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.gpu",
+        "pk": 4,
+        "fields": {
+            "product_ptr": 24,
+            "g_ram_technology": "GDDR6",
+            "clock_speed": 2250,
+            "g_ram_size": 16,
+            "video_interface": "PCIe 4.0"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 25,
+        "fields": {
+            "category": 4,
+            "brand": 2,
+            "sku": "AMD-RX-6700XT",
+            "name": "AMD Radeon RX 6700 XT",
+            "description": "12GB GDDR6, 2560 Stream Processors, 2.58 GHz Boost Clock",
+            "available_quantity": 20,
+            "price": "479.99",
+            "is_discounted": true,
+            "discount_price": "449.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "amd-radeon-rx-6700-xt",
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "products.gpu",
+        "pk": 5,
+        "fields": {
+            "product_ptr": 25,
+            "g_ram_technology": "GDDR6",
+            "clock_speed": 2580,
+            "g_ram_size": 12,
+            "video_interface": "PCIe 4.0"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 26,
+        "fields": {
+            "category": 4,
+            "brand": 3,
+            "sku": "NVIDIA-RTX-3090",
+            "name": "NVIDIA GeForce RTX 3090",
+            "description": "24GB GDDR6X, 10496 CUDA Cores, 1.70 GHz Boost Clock",
+            "available_quantity": 10,
+            "price": "1499.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "nvidia-geforce-rtx-3090",
+            "rating": 4.9
+        }
+    },
+    {
+        "model": "products.gpu",
+        "pk": 6,
+        "fields": {
+            "product_ptr": 26,
+            "g_ram_technology": "GDDR6X",
+            "clock_speed": 1700,
+            "g_ram_size": 24,
+            "video_interface": "PCIe 4.0"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 27,
+        "fields": {
+            "category": 4,
+            "brand": 3,
+            "sku": "NVIDIA-RTX-3060-TI",
+            "name": "NVIDIA GeForce RTX 3060 Ti",
+            "description": "8GB GDDR6, 4864 CUDA Cores, 1.67 GHz Boost Clock",
+            "available_quantity": 35,
+            "price": "399.99",
+            "is_discounted": true,
+            "discount_price": "369.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "nvidia-geforce-rtx-3060-ti",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.gpu",
+        "pk": 7,
+        "fields": {
+            "product_ptr": 27,
+            "g_ram_technology": "GDDR6",
+            "clock_speed": 1670,
+            "g_ram_size": 8,
+            "video_interface": "PCIe 4.0"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 28,
+        "fields": {
+            "category": 4,
+            "brand": 3,
+            "sku": "NVIDIA-RTX-3050",
+            "name": "NVIDIA GeForce RTX 3050",
+            "description": "8GB GDDR6, 2560 CUDA Cores, 1.78 GHz Boost Clock",
+            "available_quantity": 40,
+            "price": "249.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": false,
+            "image_url": "",
+            "image": "",
+            "slug": "nvidia-geforce-rtx-3050",
+            "rating": 4.5
+        }
+    },
+    {
+        "model": "products.gpu",
+        "pk": 8,
+        "fields": {
+            "product_ptr": 28,
+            "g_ram_technology": "GDDR6",
+            "clock_speed": 1780,
+            "g_ram_size": 8,
+            "video_interface": "PCIe 4.0"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 29,
+        "fields": {
+            "category": 4,
+            "brand": 2,
+            "sku": "AMD-RX-6900XT",
+            "name": "AMD Radeon RX 6900 XT",
+            "description": "16GB GDDR6, 5120 Stream Processors, 2.25 GHz Boost Clock",
+            "available_quantity": 12,
+            "price": "999.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "amd-radeon-rx-6900-xt",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.gpu",
+        "pk": 9,
+        "fields": {
+            "product_ptr": 29,
+            "g_ram_technology": "GDDR6",
+            "clock_speed": 2250,
+            "g_ram_size": 16,
+            "video_interface": "PCIe 4.0"
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 30,
+        "fields": {
+            "category": 4,
+            "brand": 3,
+            "sku": "NVIDIA-RTX-2080TI",
+            "name": "NVIDIA GeForce RTX 2080 Ti",
+            "description": "11GB GDDR6, 4352 CUDA Cores, 1.635 GHz Boost Clock",
+            "available_quantity": 8,
+            "price": "1199.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "nvidia-geforce-rtx-2080-ti",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.gpu",
+        "pk": 10,
+        "fields": {
+            "product_ptr": 30,
+            "g_ram_technology": "GDDR6",
+            "clock_speed": 1635,
+            "g_ram_size": 11,
+            "video_interface": "PCIe 3.0"
+        }
+    }
+]

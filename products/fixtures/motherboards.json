@@ -1,0 +1,312 @@
+[
+    {
+        "model": "products.product",
+        "pk": 11,
+        "fields": {
+            "category": 1,
+            "brand": 5,
+            "sku": "MSI-B450-TOMAHAWK-MAX",
+            "name": "MSI B450 TOMAHAWK MAX",
+            "description": "ATX form factor, AM4 socket, DDR4 RAM support",
+            "available_quantity": 30,
+            "price": "109.99",
+            "is_discounted": true,
+            "discount_price": "99.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "msi-b450-tomahawk-max",
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "products.motherboard",
+        "pk": 1,
+        "fields": {
+            "product_ptr": 11,
+            "form_factor": 1,
+            "ram_technology": 4,
+            "cpu_socket": 3,
+            "memory_clock_speed": 3200
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 12,
+        "fields": {
+            "category": 1,
+            "brand": 6,
+            "sku": "ASUS-ROG-STRIX-B550-F",
+            "name": "ASUS ROG STRIX B550-F",
+            "description": "ATX form factor, AM4 socket, DDR4 RAM support",
+            "available_quantity": 25,
+            "price": "189.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "asus-rog-strix-b550-f",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.motherboard",
+        "pk": 2,
+        "fields": {
+            "product_ptr": 12,
+            "form_factor": 1,
+            "ram_technology": 4,
+            "cpu_socket": 3,
+            "memory_clock_speed": 3600
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 13,
+        "fields": {
+            "category": 1,
+            "brand": 7,
+            "sku": "GIGABYTE-Z390-AORUS-ULTRA",
+            "name": "Gigabyte Z390 AORUS ULTRA",
+            "description": "ATX form factor, LGA1151 socket, DDR4 RAM support",
+            "available_quantity": 20,
+            "price": "239.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "gigabyte-z390-aorus-ultra",
+            "rating": 4.5
+        }
+    },
+    {
+        "model": "products.motherboard",
+        "pk": 3,
+        "fields": {
+            "product_ptr": 13,
+            "form_factor": 1,
+            "ram_technology": 4,
+            "cpu_socket": 1,
+            "memory_clock_speed": 3200
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 14,
+        "fields": {
+            "category": 1,
+            "brand": 6,
+            "sku": "ASUS-TUF-GAMING-X570-PLUS",
+            "name": "ASUS TUF GAMING X570-PLUS",
+            "description": "ATX form factor, AM4 socket, DDR4 RAM support",
+            "available_quantity": 35,
+            "price": "199.99",
+            "is_discounted": true,
+            "discount_price": "179.99",
+            "is_featured": false,
+            "image_url": "",
+            "image": "",
+            "slug": "asus-tuf-gaming-x570-plus",
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "products.motherboard",
+        "pk": 4,
+        "fields": {
+            "product_ptr": 14,
+            "form_factor": 1,
+            "ram_technology": 4,
+            "cpu_socket": 3,
+            "memory_clock_speed": 3600
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 15,
+        "fields": {
+            "category": 1,
+            "brand": 5,
+            "sku": "MSI-MEG-Z490-ACE",
+            "name": "MSI MEG Z490 ACE",
+            "description": "ATX form factor, LGA1200 socket, DDR4 RAM support",
+            "available_quantity": 15,
+            "price": "399.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "msi-meg-z490-ace",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.motherboard",
+        "pk": 5,
+        "fields": {
+            "product_ptr": 15,
+            "form_factor": 1,
+            "ram_technology": 4,
+            "cpu_socket": 2,
+            "memory_clock_speed": 4000
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 16,
+        "fields": {
+            "category": 1,
+            "brand": 7,
+            "sku": "GIGABYTE-B450-AORUS-M",
+            "name": "Gigabyte B450 AORUS M",
+            "description": "Micro-ATX form factor, AM4 socket, DDR4 RAM support",
+            "available_quantity": 40,
+            "price": "89.99",
+            "is_discounted": true,
+            "discount_price": "79.99",
+            "is_featured": false,
+            "image_url": "",
+            "image": "",
+            "slug": "gigabyte-b450-aorus-m",
+            "rating": 4.4
+        }
+    },
+    {
+        "model": "products.motherboard",
+        "pk": 6,
+        "fields": {
+            "product_ptr": 16,
+            "form_factor": 2,
+            "ram_technology": 4,
+            "cpu_socket": 3,
+            "memory_clock_speed": 3000
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 17,
+        "fields": {
+            "category": 1,
+            "brand": 6,
+            "sku": "ASUS-PRIME-Z490-A",
+            "name": "ASUS Prime Z490-A",
+            "description": "ATX form factor, LGA1200 socket, DDR4 RAM support",
+            "available_quantity": 22,
+            "price": "219.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "asus-prime-z490-a",
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "products.motherboard",
+        "pk": 7,
+        "fields": {
+            "product_ptr": 17,
+            "form_factor": 1,
+            "ram_technology": 4,
+            "cpu_socket": 2,
+            "memory_clock_speed": 3600
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 18,
+        "fields": {
+            "category": 1,
+            "brand": 5,
+            "sku": "MSI-MAG-B550-TOMAHAWK",
+            "name": "MSI MAG B550 TOMAHAWK",
+            "description": "ATX form factor, AM4 socket, DDR4 RAM support",
+            "available_quantity": 30,
+            "price": "159.99",
+            "is_discounted": true,
+            "discount_price": "149.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "msi-mag-b550-tomahawk",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.motherboard",
+        "pk": 8,
+        "fields": {
+            "product_ptr": 18,
+            "form_factor": 1,
+            "ram_technology": 4,
+            "cpu_socket": 3,
+            "memory_clock_speed": 3200
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 19,
+        "fields": {
+            "category": 1,
+            "brand": 7,
+            "sku": "GIGABYTE-X570-AORUS-ELITE",
+            "name": "Gigabyte X570 AORUS ELITE",
+            "description": "ATX form factor, AM4 socket, DDR4 RAM support",
+            "available_quantity": 28,
+            "price": "199.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "gigabyte-x570-aorus-elite",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.motherboard",
+        "pk": 9,
+        "fields": {
+            "product_ptr": 19,
+            "form_factor": 1,
+            "ram_technology": 4,
+            "cpu_socket": 3,
+            "memory_clock_speed": 3600
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 20,
+        "fields": {
+            "category": 1,
+            "brand": 6,
+            "sku": "ASUS-ROG-CROSSHAIR-VIII-HERO",
+            "name": "ASUS ROG Crosshair VIII Hero",
+            "description": "ATX form factor, AM4 socket, DDR4 RAM support",
+            "available_quantity": 10,
+            "price": "379.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "asus-rog-crosshair-viii-hero",
+            "rating": 4.9
+        }
+    },
+    {
+        "model": "products.motherboard",
+        "pk": 10,
+        "fields": {
+            "product_ptr": 20,
+            "form_factor": 1,
+            "ram_technology": 4,
+            "cpu_socket": 3, 
+            "memory_clock_speed": 3600
+        }
+    }
+]

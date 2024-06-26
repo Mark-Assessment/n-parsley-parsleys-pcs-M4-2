@@ -1,0 +1,292 @@
+[
+    {
+        "model": "products.product",
+        "pk": 41,
+        "fields": {
+            "category": 5,
+            "brand": 4,
+            "sku": "CORSAIR-RM850X",
+            "name": "Corsair RM850x",
+            "description": "850W, 80 PLUS Gold, Fully Modular",
+            "available_quantity": 30,
+            "price": "129.99",
+            "is_discounted": true,
+            "discount_price": "119.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-rm850x",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.psu",
+        "pk": 1,
+        "fields": {
+            "product_ptr": 41,
+            "form_factor": 1,
+            "wattage": 850
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 42,
+        "fields": {
+            "category": 5,
+            "brand": 4,
+            "sku": "CORSAIR-CX650M",
+            "name": "Corsair CX650M",
+            "description": "650W, 80 PLUS Bronze, Semi-Modular",
+            "available_quantity": 50,
+            "price": "79.99",
+            "is_discounted": true,
+            "discount_price": "69.99",
+            "is_featured": false,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-cx650m",
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "products.psu",
+        "pk": 2,
+        "fields": {
+            "product_ptr": 42,
+            "form_factor": 1,
+            "wattage": 650
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 43,
+        "fields": {
+            "category": 5,
+            "brand": 4,
+            "sku": "CORSAIR-TX750M",
+            "name": "Corsair TX750M",
+            "description": "750W, 80 PLUS Gold, Semi-Modular",
+            "available_quantity": 40,
+            "price": "109.99",
+            "is_discounted": true,
+            "discount_price": "99.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-tx750m",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.psu",
+        "pk": 3,
+        "fields": {
+            "product_ptr": 43,
+            "form_factor": 1,
+            "wattage": 750
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 44,
+        "fields": {
+            "category": 5,
+            "brand": 4,
+            "sku": "CORSAIR-SF600",
+            "name": "Corsair SF600",
+            "description": "600W, 80 PLUS Gold, Fully Modular, SFX Form Factor",
+            "available_quantity": 20,
+            "price": "119.99",
+            "is_discounted": true,
+            "discount_price": "109.99",
+            "is_featured": false,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-sf600",
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "products.psu",
+        "pk": 4,
+        "fields": {
+            "product_ptr": 44,
+            "form_factor": 2,
+            "wattage": 600
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 45,
+        "fields": {
+            "category": 5,
+            "brand": 4,
+            "sku": "CORSAIR-HX1000",
+            "name": "Corsair HX1000",
+            "description": "1000W, 80 PLUS Platinum, Fully Modular",
+            "available_quantity": 15,
+            "price": "199.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-hx1000",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.psu",
+        "pk": 5,
+        "fields": {
+            "product_ptr": 45,
+            "form_factor": 1,
+            "wattage": 1000
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 46,
+        "fields": {
+            "category": 5,
+            "brand": 5,
+            "sku": "MSI-MAG-A650GF",
+            "name": "MSI MAG A650GF",
+            "description": "650W, 80 PLUS Gold, Fully Modular",
+            "available_quantity": 35,
+            "price": "99.99",
+            "is_discounted": true,
+            "discount_price": "89.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "msi-mag-a650gf",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.psu",
+        "pk": 6,
+        "fields": {
+            "product_ptr": 46,
+            "form_factor": 1,
+            "wattage": 650
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 47,
+        "fields": {
+            "category": 5,
+            "brand": 7,
+            "sku": "GIGABYTE-G750H",
+            "name": "Gigabyte G750H",
+            "description": "750W, 80 PLUS Gold, Fully Modular",
+            "available_quantity": 25,
+            "price": "109.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "gigabyte-g750h",
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "products.psu",
+        "pk": 7,
+        "fields": {
+            "product_ptr": 47,
+            "form_factor": 1,
+            "wattage": 750
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 48,
+        "fields": {
+            "category": 5,
+            "brand": 7,
+            "sku": "GIGABYTE-P650B",
+            "name": "Gigabyte P650B",
+            "description": "650W, 80 PLUS Bronze, Non-Modular",
+            "available_quantity": 50,
+            "price": "69.99",
+            "is_discounted": true,
+            "discount_price": "59.99",
+            "is_featured": false,
+            "image_url": "",
+            "image": "",
+            "slug": "gigabyte-p650b",
+            "rating": 4.5
+        }
+    },
+    {
+        "model": "products.psu",
+        "pk": 8,
+        "fields": {
+            "product_ptr": 48,
+            "form_factor": 1,
+            "wattage": 650
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 49,
+        "fields": {
+            "category": 5,
+            "brand": 7,
+            "sku": "GIGABYTE-AORUS-P850W",
+            "name": "Gigabyte AORUS P850W",
+            "description": "850W, 80 PLUS Gold, Fully Modular",
+            "available_quantity": 20,
+            "price": "139.99",
+            "is_discounted": true,
+            "discount_price": "129.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "gigabyte-aorus-p850w",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.psu",
+        "pk": 9,
+        "fields": {
+            "product_ptr": 49,
+            "form_factor": 1,
+            "wattage": 850
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 50,
+        "fields": {
+            "category": 5,
+            "brand": 4,
+            "sku": "CORSAIR-VS550",
+            "name": "Corsair VS550",
+            "description": "550W, 80 PLUS White, Non-Modular",
+            "available_quantity": 60,
+            "price": "49.99",
+            "is_discounted": true,
+            "discount_price": "44.99",
+            "is_featured": false,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-vs550",
+            "rating": 4.5
+        }
+    },
+    {
+        "model": "products.psu",
+        "pk": 10,
+        "fields": {
+            "product_ptr": 50,
+            "form_factor": 1,
+            "wattage": 550
+        }
+    }
+]

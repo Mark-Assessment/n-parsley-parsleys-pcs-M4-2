@@ -1,0 +1,102 @@
+[
+    {
+        "model": "products.brand",
+        "pk": 1,
+        "fields": {
+            "name": "Intel",
+            "image_url": "",
+            "image": "",
+            "is_featured": false
+        }
+    },
+    {
+        "model": "products.brand",
+        "pk": 2,
+        "fields": {
+            "name": "AMD",
+            "image_url": "",
+            "image": "",
+            "is_featured": false
+        }
+    },
+    {
+        "model": "products.brand",
+        "pk": 3,
+        "fields": {
+            "name": "NVIDIA",
+            "image_url": "",
+            "image": "",
+            "is_featured": false
+        }
+    },
+    {
+        "model": "products.brand",
+        "pk": 4,
+        "fields": {
+            "name": "Corsair",
+            "image_url": "",
+            "image": "",
+            "is_featured": false
+        }
+    },
+    {
+        "model": "products.brand",
+        "pk": 5,
+        "fields": {
+            "name": "MSI",
+            "image_url": "",
+            "image": "",
+            "is_featured": false
+        }
+    },
+    {
+        "model": "products.brand",
+        "pk": 6,
+        "fields": {
+            "name": "ASUS",
+            "image_url": "",
+            "image": "",
+            "is_featured": false
+        }
+    },
+    {
+        "model": "products.brand",
+        "pk": 7,
+        "fields": {
+            "name": "Gigabyte",
+            "image_url": "",
+            "image": "",
+            "is_featured": false
+        }
+    },
+    {
+        "model": "products.brand",
+        "pk": 8,
+        "fields": {
+            "name": "Samsung",
+            "image_url": "",
+            "image": "",
+            "is_featured": false
+        }
+    },
+    {
+        "model": "products.brand",
+        "pk": 9,
+        "fields": {
+            "name": "Western Digital",
+            "image_url": "",
+            "image": "",
+            "is_featured": false
+        }
+    },
+    {
+        "model": "products.brand",
+        "pk": 10,
+        "fields": {
+            "name": "Seagate",
+            "image_url": "",
+            "image": "",
+            "is_featured": false
+        }
+    }
+]

@@ -1,0 +1,312 @@
+[
+    {
+        "model": "products.product",
+        "pk": 31,
+        "fields": {
+            "category": 3,
+            "brand": 4,
+            "sku": "CORSAIR-VENGEANCE-LPX-16GB",
+            "name": "Corsair Vengeance LPX 16GB",
+            "description": "16GB (2 x 8GB) DDR4 3200MHz",
+            "available_quantity": 50,
+            "price": "79.99",
+            "is_discounted": true,
+            "discount_price": "69.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-vengeance-lpx-16gb",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.ram",
+        "pk": 1,
+        "fields": {
+            "product_ptr": 31,
+            "ram_technology": 4,
+            "memory_size": 16,
+            "no_sticks": 2,
+            "memory_speed": 3200
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 32,
+        "fields": {
+            "category": 3,
+            "brand": 4,
+            "sku": "CORSAIR-VENGEANCE-RGB-PRO-32GB",
+            "name": "Corsair Vengeance RGB Pro 32GB",
+            "description": "32GB (2 x 16GB) DDR4 3600MHz",
+            "available_quantity": 30,
+            "price": "179.99",
+            "is_discounted": true,
+            "discount_price": "159.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-vengeance-rgb-pro-32gb",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.ram",
+        "pk": 2,
+        "fields": {
+            "product_ptr": 32,
+            "ram_technology": 4,
+            "memory_size": 32,
+            "no_sticks": 2,
+            "memory_speed": 3600
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 33,
+        "fields": {
+            "category": 3,
+            "brand": 4,
+            "sku": "CORSAIR-DOMINATOR-PLATINUM-64GB",
+            "name": "Corsair Dominator Platinum 64GB",
+            "description": "64GB (4 x 16GB) DDR4 3200MHz",
+            "available_quantity": 20,
+            "price": "399.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-dominator-platinum-64gb",
+            "rating": 4.9
+        }
+    },
+    {
+        "model": "products.ram",
+        "pk": 3,
+        "fields": {
+            "product_ptr": 33,
+            "ram_technology": 4,
+            "memory_size": 64,
+            "no_sticks": 4,
+            "memory_speed": 3200
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 34,
+        "fields": {
+            "category": 3,
+            "brand": 4,
+            "sku": "CORSAIR-VENGEANCE-LED-16GB",
+            "name": "Corsair Vengeance LED 16GB",
+            "description": "16GB (2 x 8GB) DDR4 3000MHz",
+            "available_quantity": 40,
+            "price": "89.99",
+            "is_discounted": true,
+            "discount_price": "79.99",
+            "is_featured": false,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-vengeance-led-16gb",
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "products.ram",
+        "pk": 4,
+        "fields": {
+            "product_ptr": 34,
+            "ram_technology": 4,
+            "memory_size": 16,
+            "no_sticks": 2,
+            "memory_speed": 3000
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 35,
+        "fields": {
+            "category": 3,
+            "brand": 4,
+            "sku": "CORSAIR-VENGEANCE-LPX-8GB",
+            "name": "Corsair Vengeance LPX 8GB",
+            "description": "8GB (1 x 8GB) DDR4 2400MHz",
+            "available_quantity": 60,
+            "price": "39.99",
+            "is_discounted": true,
+            "discount_price": "34.99",
+            "is_featured": false,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-vengeance-lpx-8gb",
+            "rating": 4.5
+        }
+    },
+    {
+        "model": "products.ram",
+        "pk": 5,
+        "fields": {
+            "product_ptr": 35,
+            "ram_technology": 4,
+            "memory_size": 8,
+            "no_sticks": 1,
+            "memory_speed": 2400
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 36,
+        "fields": {
+            "category": 3,
+            "brand": 4,
+            "sku": "CORSAIR-VENGEANCE-RGB-16GB",
+            "name": "Corsair Vengeance RGB 16GB",
+            "description": "16GB (2 x 8GB) DDR4 3200MHz",
+            "available_quantity": 50,
+            "price": "99.99",
+            "is_discounted": true,
+            "discount_price": "89.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-vengeance-rgb-16gb",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.ram",
+        "pk": 6,
+        "fields": {
+            "product_ptr": 36,
+            "ram_technology": 4,
+            "memory_size": 16,
+            "no_sticks": 2,
+            "memory_speed": 3200
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 37,
+        "fields": {
+            "category": 3,
+            "brand": 8,
+            "sku": "SAMSUNG-DDR4-16GB",
+            "name": "Samsung DDR4 16GB",
+            "description": "16GB (1 x 16GB) DDR4 2666MHz",
+            "available_quantity": 70,
+            "price": "74.99",
+            "is_discounted": true,
+            "discount_price": "69.99",
+            "is_featured": false,
+            "image_url": "",
+            "image": "",
+            "slug": "samsung-ddr4-16gb",
+            "rating": 4.6
+        }
+    },
+    {
+        "model": "products.ram",
+        "pk": 7,
+        "fields": {
+            "product_ptr": 37,
+            "ram_technology": 4,
+            "memory_size": 16,
+            "no_sticks": 1,
+            "memory_speed": 2666
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 38,
+        "fields": {
+            "category": 3,
+            "brand": 4,
+            "sku": "CORSAIR-VENGEANCE-RGB-PRO-16GB",
+            "name": "Corsair Vengeance RGB Pro 16GB",
+            "description": "16GB (2 x 8GB) DDR4 3000MHz",
+            "available_quantity": 55,
+            "price": "84.99",
+            "is_discounted": true,
+            "discount_price": "74.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-vengeance-rgb-pro-16gb",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.ram",
+        "pk": 8,
+        "fields": {
+            "product_ptr": 38,
+            "ram_technology": 4,
+            "memory_size": 16,
+            "no_sticks": 2,
+            "memory_speed": 3000
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 39,
+        "fields": {
+            "category": 3,
+            "brand": 4,
+            "sku": "CORSAIR-VENGEANCE-LPX-32GB",
+            "name": "Corsair Vengeance LPX 32GB",
+            "description": "32GB (2 x 16GB) DDR4 3000MHz",
+            "available_quantity": 40,
+            "price": "159.99",
+            "is_discounted": true,
+            "discount_price": "149.99",
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-vengeance-lpx-32gb",
+            "rating": 4.7
+        }
+    },
+    {
+        "model": "products.ram",
+        "pk": 9,
+        "fields": {
+            "product_ptr": 39,
+            "ram_technology": 4,
+            "memory_size": 32,
+            "no_sticks": 2,
+            "memory_speed": 3000
+        }
+    },
+    {
+        "model": "products.product",
+        "pk": 40,
+        "fields": {
+            "category": 3,
+            "brand": 4,
+            "sku": "CORSAIR-DOMINATOR-PLATINUM-RGB-32GB",
+            "name": "Corsair Dominator Platinum RGB 32GB",
+            "description": "32GB (2 x 16GB) DDR4 3200MHz",
+            "available_quantity": 25,
+            "price": "199.99",
+            "is_discounted": false,
+            "discount_price": null,
+            "is_featured": true,
+            "image_url": "",
+            "image": "",
+            "slug": "corsair-dominator-platinum-rgb-32gb",
+            "rating": 4.8
+        }
+    },
+    {
+        "model": "products.ram",
+        "pk": 10,
+        "fields": {
+            "product_ptr": 40,
+            "ram_technology": 4,
+            "memory_size": 32,
+            "no_sticks": 2,
+            "memory_speed": 3200
+        }
+    }
+]

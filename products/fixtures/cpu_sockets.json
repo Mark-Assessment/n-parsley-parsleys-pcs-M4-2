@@ -1,0 +1,58 @@
+[
+    {
+        "model": "products.cpusocket",
+        "pk": 1,
+        "fields": {
+            "socket_type": "LGA1151"
+        }
+    },
+    {
+        "model": "products.cpusocket",
+        "pk": 2,
+        "fields": {
+            "socket_type": "LGA1200"
+        }
+    },
+    {
+        "model": "products.cpusocket",
+        "pk": 3,
+        "fields": {
+            "socket_type": "AM4"
+        }
+    },
+    {
+        "model": "products.cpusocket",
+        "pk": 4,
+        "fields": {
+            "socket_type": "TR4"
+        }
+    },
+    {
+        "model": "products.cpusocket",
+        "pk": 5,
+        "fields": {
+            "socket_type": "sTRX4"
+        }
+    },
+    {
+        "model": "products.cpusocket",
+        "pk": 6,
+        "fields": {
+            "socket_type": "LGA2066"
+        }
+    },
+    {
+        "model": "products.cpusocket",
+        "pk": 7,
+        "fields": {
+            "socket_type": "LGA1700"
+        }
+    },
+    {
+        "model": "products.cpusocket",
+        "pk": 8,
+        "fields": {
+            "socket_type": "LGA2011"
+        }
+    }
+]
