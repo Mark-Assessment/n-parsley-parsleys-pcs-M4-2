@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from .models import Category, Brand, CPU, GPU, PSU, RAM, Motherboard, CPUSocket, RAMTechnology, FormFactor, Product
+from .models import Category, Brand, CPU, GPU, PSU, RAM, Motherboard, CPUSocket, RAMTechnology, FormFactor, Product, Case, Storage
 
 admin.site.register(Category)
 admin.site.register(Brand)
@@ -14,3 +14,5 @@ admin.site.register(CPUSocket)
 admin.site.register(RAMTechnology)
 admin.site.register(FormFactor)
 admin.site.register(Product)
+admin.site.register(Case)
+admin.site.register(Storage)
