@@ -19,6 +19,8 @@ def all_products(request):
             products = products.filter(category=form.cleaned_data['category'])
         if form.cleaned_data['brand']:
             products = products.filter(brand=form.cleaned_data['brand'])
+        if form.cleaned_data['sort_by']:
+            products = products.order_by(form.cleaned_data['sort_by'])
 
     return render(request, 'products/all_products.html', {'products': products, 'form': form})
 
