@@ -21,7 +21,7 @@ label {
   margin-bottom: 0.3rem;
   font-size: 0.9rem;
   /* font-weight: bold; */
-  color: #ffffff;
+  color: black;
   transition: color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
 }
 
@@ -38,9 +38,13 @@ input:focus {
 }
 
 h1 {
-  color: var(--text-color);
-  margin-top: 8rem;
+  color: black;
+  padding-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.main-page-content {
+    background-color: rgb(241, 241, 241);
 }
 
 .card {
@@ -88,7 +92,6 @@ h1 {
 
 .filter-form {
   padding: 1rem;
-  background: var(--primary-color);
   border-radius: 0.5rem;
 }
 
@@ -131,7 +134,7 @@ h1 {
   top: 0;
   left: 0;
   background-color: var(--featured);
-  color: #fff;
+  color: var(--text-color);
   padding: 0.2em 0.5em;
   font-size: 0.8em;
   font-weight: bold;
