@@ -8,49 +8,53 @@
 {% endblock %}
 
 {% block page_header %}
-<h1 class='text-center my-4'>All Products</h1>
+<h1 class='text-center'>All Products</h1>
 {% endblock %}
 
 {% block content %}
 <div class="container-fluid">
     <div class="row">
-        <div class="col-1 col-lg-2"></div>
-        <div class="col-10 col-lg-8 main-column">
-            <form method="get" class="mb-4">
+        <div class="col-1 col-lg-2">
+            <form method="get" class="mb-4 filter-form">
                 <div class="form-row">
-                    <div class="col-md-3 mb-3">
+                    <div class="col-md-12 mb-3 custom-input">
                         {{ form.price_min.label_tag }}
                         {{ form.price_min }}
                     </div>
-                    <div class="col-md-3 mb-3">
+                    <div class="col-md-12 mb-3 custom-input">
                         {{ form.price_max.label_tag }}
                         {{ form.price_max }}
                     </div>
-                    <div class="col-md-3 mb-3">
+                    <div class="col-md-12 mb-3 custom-input">
                         {{ form.rating_min.label_tag }}
                         {{ form.rating_min }}
                     </div>
-                    <div class="col-md-3 mb-3">
+                    <div class="col-md-12 mb-3 custom-input">
                         {{ form.rating_max.label_tag }}
                         {{ form.rating_max }}
                     </div>
                 </div>
                 <div class="form-row">
-                    <div class="col-md-3 mb-3">
+                    <div class="col-md-12 mb-3 custom-input">
                         {{ form.category.label_tag }}
                         {{ form.category }}
                     </div>
-                    <div class="col-md-3 mb-3">
+                    <div class="col-md-12 mb-3 custom-input">
                         {{ form.brand.label_tag }}
                         {{ form.brand }}
                     </div>
-                    <div class="col-md-3 mb-3">
+                    <div class="col-md-12 mb-3 custom-input">
                         {{ form.sort_by.label_tag }}
                         {{ form.sort_by }}
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Filter</button>
+                <div class='filter-button-div'>
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                </div>
             </form>
+        </div>
+        <div class="col-10 col-lg-8 main-column">
+            
             <div class="row">
                 {% for product in products %}
                 <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
