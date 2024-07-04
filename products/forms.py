@@ -2,19 +2,14 @@ from django import forms
 from .models import Category, Brand
 
 class ProductFilterForm(forms.Form):
-    price_min = forms.DecimalField(required=False, max_digits=10, decimal_places=2, label='Min Price')
-    price_max = forms.DecimalField(required=False, max_digits=10, decimal_places=2, label='Max Price')
-    rating_min = forms.DecimalField(required=False, max_digits=3, decimal_places=2, label='Min Rating')
-    rating_max = forms.DecimalField(required=False, max_digits=3, decimal_places=2, label='Max Rating')
-    category = forms.ModelChoiceField(queryset=Category.objects.all(), required=False, label='Category')
-    brand = forms.ModelChoiceField(queryset=Brand.objects.all(), required=False, label='Brand')
-    
-    SORT_CHOICES = [
-        ('name', 'Name (A-Z)'),
-        ('-name', 'Name (Z-A)'),
-        ('price', 'Price (Low to High)'),
-        ('-price', 'Price (High to Low)'),
-        ('rating', 'Rating (Low to High)'),
-        ('-rating', 'Rating (High to Low)'),
-    ]
-    sort_by = forms.ChoiceField(choices=SORT_CHOICES, required=False, label='Sort By')
+    price_min = forms.DecimalField(required=False, label='Min Price', min_value=0)
+    price_max = forms.DecimalField(required=False, label='Max Price', min_value=0)
+    rating_min = forms.DecimalField(required=False, label='Min Rating', min_value=0, max_value=5, decimal_places=1)
+    rating_max = forms.DecimalField(required=False, label='Max Rating', min_value=0, max_value=5, decimal_places=1)
+    category = forms.ChoiceField(required=False, choices=[(category.name, category.name) for category in Category.objects.all()], label='Category')
+    brand = forms.ChoiceField(required=False, choices=[(brand.name, brand.name) for brand in Brand.objects.all()], label='Brand')
+    sort_by = forms.ChoiceField(required=False, choices=[
+        ('name', 'Name'),
+        ('price', 'Price'),
+        ('rating', 'Rating'),
+    ], label='Sort By')
