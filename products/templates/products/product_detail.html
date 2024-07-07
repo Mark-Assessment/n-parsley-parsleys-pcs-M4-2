@@ -2,38 +2,118 @@
 {% load static %}
 {% load currency %}
 
+{% block extra_title %}{{ product.name }} | {% endblock %}
+
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'home/css/product_detail.css' %}">
+<link rel="stylesheet" href="{% static 'products/css/product_detail.css' %}">
 {% endblock %}
 
 {% block page_header %}
-<h1>{{ product.name }}</h1>
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid mt-4 mb-5">
     <div class="row">
-        <div class="col-1 col-lg-2"></div>
-        <div class="col-10 col-lg-8 main-column">
-            <div class="row">
-                <div class="col-12 col-md-6">
-                    <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'media/default-product.png' %}{% endif %}" class="img-fluid" alt="{{ product.name }}">
+        <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
+            <div class="image-container my-5">
+                {% if product.image %}
+                <a href="{{ product.image.url }}" target="_blank">
+                    <img class="card-img-top product-image-lg" src="{{ product.image.url }}" alt="{{ product.name }}">
+                </a>
+                {% else %}
+                <a href="">
+                    <img class="card-img-top product-image-lg" src="{% static 'media/default-product.png' %}" alt="{{ product.name }}">
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 my-5">
+            <div class="product-details-container mb-5 mt-md-4">
+                <p class="mb-0 h4 font-weight-bold brand-font-alt mb-1 mt-3">{{ product.name }}</p>
+                <div class="row">
+                    <div class="col">
+                        <p class="mb-0 pt-2">Brand:
+                            <span class="h6 pb-3 brand-font-alt brand-name-link">
+                                <em>{{ product.brand.name }}</em>
+                            </span>
+                        </p>
+                    </div>
                 </div>
-                <div class="col-12 col-md-6">
-                    <h2>{{ product.name }}</h2>
-                    <p class="price">{{ product.price|convert_price:request.conversion_info }}</p>
-                    <p>{{ product.description }}</p>
-                    <form action="{% url 'add_to_cart' product.id %}" method="post">
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-primary">Add to Cart</button>
-                    </form>
+                <p class="small mt-1 mb-0">
+                    <a class="alt-text-muted font-weight-bold" href="{% url 'all_products' %}?category={{ product.category.name }}">
+                        <i class="fas fa-list mr-1"></i>{{ product.category.name }}
+                    </a>
+                </p>
+                <div class="price-box">
+                    {% if product.is_discounted %}
+                    <p class="mb-0 pt-3 pb-1"><span class="h3 text-left font-weight-bold price-font">{{ product.discount_price|convert_price:request.conversion_info }}</span></p>
+                    <p class="mb-0"><s>{{ product.price|convert_price:request.conversion_info }}</s></p>
+                    <p class="mb-0 text-left"><span class="text-purple"><strong>You save:</strong> </span> {{ product.savings|convert_price:request.conversion_info }}</p>
+                    {% else %}
+                    <p class="mb-0 pt-3 pb-1"><span class="h3 text-left font-weight-bold price-font">{{ product.price|convert_price:request.conversion_info }}</span></p>
+                    {% endif %}
+                </div>
+                <form class="form" action="{% url 'add_to_cart' product.id %}" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-12">
+                            <p class="mt-3"><strong>Quantity:</strong></p>
+                            <div class="form-group w-50">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-black rounded-0 decrement-qty" type="button">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </div>
+                                    <input class="form-control qty_input" type="number" name="quantity" value="1" min="1" max="99">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-black rounded-0 increment-qty" type="button">
+                                            <i class="fas fa-plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mt-2">
+                            <a href="{% url 'all_products' %}" class="btn btn-outline-black rounded-0 mt-2">
+                                <i class="fas fa-chevron-left"></i>
+                                <span class="text-uppercase">Keep Shopping</span>
+                            </a>
+                            <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-2" value="Add to Cart">
+                        </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </div>
+                </form>
+                <div class="accordion md-accordion mt-4" id="accordionEx1" role="tablist" aria-multiselectable="true">
+                    <div class="card">
+                        <div class="card-header" role="tab" id="headingTwo1">
+                            <a class="collapsed text-decoration-none" data-toggle="collapse" data-parent="#accordionEx1" href="#collapseTwo1"
+                                aria-expanded="false" aria-controls="collapseTwo1">
+                                <p class="mb-0 brand-font-alt h6">
+                                    Description <span class="float-right"><i class="fas fa-angle-down rotate-icon"></i></span>
+                                </p>
+                            </a>
+                        </div>
+                        <div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1"
+                            data-parent="#accordionEx1">
+                            <div class="card-body">
+                                <p class="mt-3">{{ product.description }}</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-1 col-lg-2"></div>
     </div>
 </div>
+
 {% endblock %}
 
 {% block postloadjs %}
+<script src="{% static 'products/js/quantity.js' %}"></script>
 {% endblock %}
