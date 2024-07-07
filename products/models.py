@@ -62,6 +62,11 @@ class Product(models.Model):
     def __str__(self):
         return self.name
 
+    def savings(self):
+        if self.is_discounted and self.discount_price:
+            return self.price - self.discount_price
+        return None
+
 
 class CPUSocket(models.Model):
     '''
