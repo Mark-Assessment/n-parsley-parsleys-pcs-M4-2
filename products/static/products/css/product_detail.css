@@ -1,0 +1,4 @@
+.main-page-content {
+    background-color: rgb(241, 241, 241);
+    min-height: calc(100vh - 4rem);
+}
