@@ -30,6 +30,9 @@ DEBUG = os.environ.get("DEBUG")
 
 ALLOWED_HOSTS = ['192.168.0.14', 'localhost', '127.0.0.1']
 
+# STRIPE KEYS
+STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY")
+STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY")
 
 # Application definition
 
@@ -46,7 +49,8 @@ INSTALLED_APPS = [
     'allauth.socialaccount',  # Required by AllAuth
     'home',
     'products',
-    'cart'
+    'cart',
+    'checkout'
 ]
 
 MIDDLEWARE = [
