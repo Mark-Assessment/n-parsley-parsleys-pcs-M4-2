@@ -26,4 +26,5 @@ urlpatterns = [
     path('products/', include('products.urls')),
     path('cart/', include('cart.urls')),
     path('set_currency/<str:currency>/', set_currency, name='set_currency'),
+    path('', include('checkout.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
