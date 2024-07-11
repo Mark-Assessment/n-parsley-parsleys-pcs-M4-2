@@ -1,0 +1,12 @@
+.main-page-content {
+    background-color: rgb(241, 241, 241);
+    min-height: calc(100vh - 4rem);
+}
+
+/* For screens smaller than 576px */
+@media (max-width: 576px) {
+    input,
+    select {
+        width: 100%;
+    }
+  }
