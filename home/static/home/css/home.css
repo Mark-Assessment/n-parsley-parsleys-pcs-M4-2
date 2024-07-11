@@ -102,20 +102,11 @@
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.main-card a:hover {
+/* .main-card a:hover {
     color: black;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
     transform: scale(1.02);
-}
-
-.card {
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.card:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
-    transform: scale(1.02);
-}
+} */
 
 .main-card .btn {
     color: var(--text-color);
@@ -163,4 +154,12 @@
     background: #717F7F;
     color: #FFF;
     text-decoration: none;
+}
+
+.owl-item {
+    height: 500px;
+}
+
+.owl-item .item {
+    height: 100%;
 }
