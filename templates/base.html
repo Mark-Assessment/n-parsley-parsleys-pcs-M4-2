@@ -71,12 +71,11 @@
                 </div>
             </div>
             <div class="col-4 d-none d-lg-flex">
-                <form method="GET" class="w-100" action="">
+                <form method="GET" class="w-100" action="{% url 'search' %}">
                     <div class="search-bar w-100">
                         <i class="fa-solid fa-magnifying-glass search-icon"></i>
-
                         <input id="query" class="input w-100" type="search" placeholder="Search for products..."
-                            name="searchbar" />
+                               name="searchbar" />
                     </div>
                 </form>
             </div>
