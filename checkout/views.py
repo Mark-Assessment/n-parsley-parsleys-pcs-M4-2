@@ -47,6 +47,7 @@ def checkout(request):
             if request.user.is_authenticated:
                 order.user = request.user
             order.total_amount = converted_total
+            order.session_key = request.session.session_key
             order.save()
 
             session = stripe.checkout.Session.create(
@@ -76,6 +77,8 @@ def checkout(request):
             try:
                 user_defaults = UserDefaults.objects.get(user=request.user)
                 initial_data = {
+                    'first_name': request.user.first_name,
+                    'last_name': request.user.last_name,
                     'address_line_1': user_defaults.address_line1,
                     'address_line_2': user_defaults.address_line2,
                     'city': user_defaults.town_or_city,
