@@ -15,20 +15,13 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font nav-link mr-1" href="#" id="part-checker-link">
-                PC Part Checker
-            </a>
-        </li>
-
-        <li class="nav-item dropdown">
             <a class="logo-font nav-link" href="#" id="contact-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Contact Us
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">FAQ's</a>
-                <a href="" class="dropdown-item">Terms & Conditions</a>
-                <a href="" class="dropdown-item">About Us</a>
-                <a href="" class="dropdown-item">Contact Us</a>
+                <a href="{% url 'faqs' %}" class="dropdown-item">FAQ's</a>
+                <a href="{% url 'terms_and_conditions' %}" class="dropdown-item">Terms & Conditions</a>
+                <a href="{% url 'privacy_policy' %}" class="dropdown-item">Privacy Policy</a>
             </div>
         </li>
     </ul>

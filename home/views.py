@@ -22,3 +22,12 @@ def set_currency(request, currency):
     request.session['currency_info'] = f'{currency}:{conversion_rate}'
     request.session['currency'] = currency
     return redirect(request.META.get('HTTP_REFERER', reverse('home')))
+
+def privacy_policy(request):
+    return render(request, 'home/privacy_policy.html')
+
+def terms_and_conditions(request):
+    return render(request, 'home/terms_and_conditions.html')
+
+def faqs(request):
+    return render(request, 'home/faqs.html')
