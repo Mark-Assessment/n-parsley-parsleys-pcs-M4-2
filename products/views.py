@@ -1,6 +1,8 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Product, Category, Brand
 from .forms import ProductFilterForm
+from django.db.models import Q
+
 
 def all_products(request):
     products = Product.objects.all()
@@ -42,3 +44,16 @@ def all_products(request):
 def product_detail(request, slug):
     product = get_object_or_404(Product, slug=slug)
     return render(request, 'products/product_detail.html', {'product': product})
+
+def search(request):
+    query = request.GET.get('searchbar')
+    if query:
+        products = Product.objects.filter(
+            Q(name__icontains=query) |
+            Q(description__icontains=query) |
+            Q(category__name__icontains=query) |
+            Q(brand__name__icontains=query)
+        )
+    else:
+        products = Product.objects.all()
+    return render(request, 'products/search_results.html', {'products': products, 'query': query})
