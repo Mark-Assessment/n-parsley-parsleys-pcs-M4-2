@@ -47,9 +47,9 @@ def checkout(request):
             if request.user.is_authenticated:
                 order.user = request.user
             order.total_amount = converted_total
-            order.session_key = request.session.session_key
             order.save()
 
+            # Create Stripe payment session
             session = stripe.checkout.Session.create(
                 payment_method_types=['card'],
                 line_items=[{
@@ -63,7 +63,7 @@ def checkout(request):
                     'quantity': item.quantity,
                 } for item in cart_items],
                 mode='payment',
-                success_url=request.build_absolute_uri(reverse('order_success')) + f'?order_id={order.id}',
+                success_url=request.build_absolute_uri(reverse('order_success', kwargs={'order_id': order.id})),
                 cancel_url=request.build_absolute_uri(reverse('checkout')),
                 metadata={
                     'order_id': order.id,
@@ -77,8 +77,8 @@ def checkout(request):
             try:
                 user_defaults = UserDefaults.objects.get(user=request.user)
                 initial_data = {
-                    'first_name': request.user.first_name,
-                    'last_name': request.user.last_name,
+                    'first_name': user_defaults.first_name,
+                    'last_name': user_defaults.last_name,
                     'address_line_1': user_defaults.address_line1,
                     'address_line_2': user_defaults.address_line2,
                     'city': user_defaults.town_or_city,
@@ -99,8 +99,7 @@ def checkout(request):
     })
 
 @require_GET
-def order_success(request):
-    order_id = request.GET.get('order_id')
+def order_success(request, order_id):
     if request.user.is_authenticated:
         order = get_object_or_404(Order, id=order_id, user=request.user)
         # Delete cart items for authenticated user after successful order
