@@ -57,6 +57,8 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
 }
 
 .card a {
@@ -114,14 +116,9 @@ h1 {
   transition: 0.3s ease-in-out;
 }
 
-.card-img:hover {
-  transform: translateY(-12%);
-  box-shadow: rgba(99, 99, 99, 0.25) 0px 13px 47px -5px,
-    rgba(56, 56, 56, 0.3) 0px 8px 16px -8px;
-}
-
-.card-button:hover {
-  background-color: #4e4e4e;
+.card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  transform: scale(1.02);
 }
 
 .card.featured {
