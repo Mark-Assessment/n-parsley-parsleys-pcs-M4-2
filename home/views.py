@@ -1,12 +1,16 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
+from products.models import Product
 
 # Create your views here.
 
-
 def home(request):
-    return render(request, 'home/index.html')
-
+    discounted_products = Product.objects.filter(is_discounted=True)
+    featured_products = Product.objects.filter(is_featured=True)
+    return render(request, 'home/index.html', {
+        'discounted_products': discounted_products,
+        'featured_products': featured_products
+    })
 
 def set_currency(request, currency):
     conversion_rates = {
