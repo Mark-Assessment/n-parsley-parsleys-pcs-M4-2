@@ -7,18 +7,16 @@ class ProductFilterForm(forms.Form):
     rating_min = forms.DecimalField(required=False, label='Min Rating', min_value=0, max_value=5, decimal_places=1)
     rating_max = forms.DecimalField(required=False, label='Max Rating', min_value=0, max_value=5, decimal_places=1)
     
-    category = forms.ModelChoiceField(
+    category = forms.ChoiceField(
         required=False, 
-        queryset=Category.objects.all(), 
-        label='Category',
-        empty_label='Select a category'
+        choices=[('', 'Select a category')] + [(category.name, category.name) for category in Category.objects.all()], 
+        label='Category'
     )
     
-    brand = forms.ModelChoiceField(
+    brand = forms.ChoiceField(
         required=False, 
-        queryset=Brand.objects.all(), 
-        label='Brand',
-        empty_label='Select a brand'
+        choices=[('', 'Select a brand')] + [(brand.name, brand.name) for brand in Brand.objects.all()], 
+        label='Brand'
     )
     
     sort_by = forms.ChoiceField(
