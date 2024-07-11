@@ -30,12 +30,12 @@ def checkout(request):
     conversion_rate = Decimal(conversion_rate)
 
     # Convert total to the selected currency
-    converted_total = total * conversion_rate
+    converted_total = total
     converted_cart_items = [
         {
             'product': item.product,
             'quantity': item.quantity,
-            'total_price': item.total_price * conversion_rate,
+            'total_price': item.total_price,
         }
         for item in cart_items
     ]
