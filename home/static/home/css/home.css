@@ -1,3 +1,24 @@
+.quick-nav a {
+    width: 100%;
+    padding: 1rem;
+    border: black solid 1px;
+    border-radius: 0px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.owl-theme .owl-controls .owl-nav [class*='owl-'] {
+    background: #869791;
+    color: #000000;
+    border-radius: 3px;
+    padding: 5px 15px;
+    margin: 5px;
+}
+.owl-theme .owl-controls .owl-nav [class*='owl-']:hover {
+    background: #717F7F;
+    color: #010101;
+    text-decoration: none;
+}
+
 .main-column {
     background-color: white;
     padding: 1rem;
@@ -26,22 +47,8 @@
     padding: 0.1rem 0.5rem;
 }
 
-.deals-link:hover {
-    
-}
-
 .main-card {
-    height: 30vh;
     background: linear-gradient(90deg, rgb(13, 13, 13) 0, rgb(30, 30, 30) 90%, rgb(40, 40, 40) 100%);
-    color: var(--text-color);
-}
-
-.main-card a {
-    color: var(--text-color);
-    border: 1px solid var(--text-color);
-}
-
-.main-card a:hover {
     color: var(--text-color);
 }
 
@@ -49,7 +56,77 @@
     height: 100%;
 }
 
-.main-card-img{
+.card-title {
+    color: black;
+}
+
+#discounted-products-carousel .item,
+#featured-products-carousel .item {
+    padding: 15px;
+    color: #000000;
+    /* height: 24rem; */
+}
+
+#discounted-products-carousel .card,
+#featured-products-carousel .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+#discounted-products-carousel .card img,
+#featured-products-carousel .card img {
+    flex-grow: 1;
+    object-fit: contain;
+}
+
+#discounted-products-carousel .card-body,
+#featured-products-carousel .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.owl-theme .owl-controls .owl-nav [class*='owl-'] {
+    background: #869791;
+    color: #FFF;
+    border-radius: 3px;
+    padding: 5px 15px;
+    margin: 5px;
+}
+
+.main-card a {
+    color: black;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.main-card a:hover {
+    color: black;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    transform: scale(1.02);
+}
+
+.card {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    transform: scale(1.02);
+}
+
+.main-card .btn {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+
+.main-card .btn:hover {
+    color: var(--text-color);
+}
+
+.main-card-img {
     width: auto;
     height: 100%;
     margin: 0 auto;
@@ -61,8 +138,7 @@
     margin: 0 auto;
 }
 
-.main-card-img img{
-    
+.main-card-img img {
     max-height: 100%;
     margin: 0 auto;
 }
@@ -73,4 +149,18 @@
     border: black solid 1px;
     border-radius: 0px;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.owl-theme .owl-controls .owl-nav [class*='owl-'] {
+    background: #869791;
+    color: #FFF;
+    border-radius: 3px;
+    padding: 5px 15px;
+    margin: 5px;
+}
+
+.owl-theme .owl-controls .owl-nav [class*='owl-']:hover {
+    background: #717F7F;
+    color: #FFF;
+    text-decoration: none;
 }
