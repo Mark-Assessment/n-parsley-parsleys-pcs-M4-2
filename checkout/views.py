@@ -1,19 +1,27 @@
 import stripe
 from django.conf import settings
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
 from django.views.decorators.http import require_GET
 from .forms import CheckoutForm
 from .models import Order
 from cart.models import CartItem
+from profiles.models import UserDefaults
 from decimal import Decimal
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
-@login_required
 def checkout(request):
-    cart_items = CartItem.objects.filter(user=request.user, purchased=False)
+    if request.user.is_authenticated:
+        cart_items = CartItem.objects.filter(user=request.user, purchased=False)
+    else:
+        session_key = request.session.session_key
+        if not session_key:
+            request.session.create()
+            session_key = request.session.session_key
+        cart_items = CartItem.objects.filter(session_key=session_key, purchased=False)
+
     total = sum(item.total_price for item in cart_items)
 
     # Get the selected currency and conversion rate from the session
@@ -36,7 +44,8 @@ def checkout(request):
         form = CheckoutForm(request.POST)
         if form.is_valid():
             order = form.save(commit=False)
-            order.user = request.user
+            if request.user.is_authenticated:
+                order.user = request.user
             order.total_amount = converted_total
             order.save()
 
@@ -62,7 +71,21 @@ def checkout(request):
 
             return redirect(session.url, code=303)
     else:
-        form = CheckoutForm()
+        initial_data = {}
+        if request.user.is_authenticated:
+            try:
+                user_defaults = UserDefaults.objects.get(user=request.user)
+                initial_data = {
+                    'address_line_1': user_defaults.address_line1,
+                    'address_line_2': user_defaults.address_line2,
+                    'city': user_defaults.town_or_city,
+                    'county': user_defaults.county,
+                    'postcode': user_defaults.postcode,
+                    'country': user_defaults.country,
+                }
+            except UserDefaults.DoesNotExist:
+                pass
+        form = CheckoutForm(initial=initial_data)
 
     return render(request, 'checkout/checkout.html', {
         'form': form,
@@ -73,12 +96,16 @@ def checkout(request):
     })
 
 @require_GET
-@login_required
 def order_success(request):
     order_id = request.GET.get('order_id')
-    order = Order.objects.get(id=order_id, user=request.user)
-
-    # Delete cart items after successful order
-    CartItem.objects.filter(user=request.user, purchased=False).delete()
+    if request.user.is_authenticated:
+        order = get_object_or_404(Order, id=order_id, user=request.user)
+        # Delete cart items for authenticated user after successful order
+        CartItem.objects.filter(user=request.user, purchased=False).delete()
+    else:
+        session_key = request.session.session_key
+        order = get_object_or_404(Order, id=order_id, user__isnull=True, session_key=session_key)
+        # Delete cart items for guest user after successful order
+        CartItem.objects.filter(session_key=session_key, purchased=False).delete()
 
     return render(request, 'checkout/order_success.html', {'order': order})

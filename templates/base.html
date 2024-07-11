@@ -102,18 +102,18 @@
 
                 <a href="{% url 'cart_detail' %}" class="ml-4" role="button">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    {% if request.cart_total %}
-                        {% if request.session.currency == 'USD' %}
-                            ${{ request.cart_total|floatformat:2 }}
-                        {% elif request.session.currency == 'EUR' %}
-                            €{{ request.cart_total|floatformat:2 }}
+                    {% if cart_total %}
+                        {% if currency == 'USD' %}
+                            ${{ cart_total|floatformat:2 }}
+                        {% elif currency == 'EUR' %}
+                            €{{ cart_total|floatformat:2 }}
                         {% else %}
-                            £{{ request.cart_total|floatformat:2 }}
+                            £{{ cart_total|floatformat:2 }}
                         {% endif %}
                     {% else %}
-                        {% if request.session.currency == 'USD' %}
+                        {% if currency == 'USD' %}
                             $0.00
-                        {% elif request.session.currency == 'EUR' %}
+                        {% elif currency == 'EUR' %}
                             €0.00
                         {% else %}
                             £0.00
