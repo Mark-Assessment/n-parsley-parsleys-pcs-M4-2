@@ -60,6 +60,9 @@ View the live project [Here!](https://parsleypcs-e697de04d1ce.herokuapp.com/)
                 - [**Create a Superuser**](#create-a-superuser)
                 - [**Collect Static Files**](#collect-static-files)
                 - [**Open Your App**](#open-your-app)
+5. [**Credits**](#credits)
+    - [**Tools And Software**](#tools-and-software)
+    - [**Media**](#media)
 
 
 ---
@@ -531,3 +534,23 @@ To store media files on AWS S3, follow these steps:
    ```
 
 The Django application should now be successfully deployed on Heroku and configured to use AWS S3 for media file storage.
+
+## Credits
+
+### Tools And Software
+
+These different tools were used either in the development or documentation processes.
+
+[Tables Generator](https://www.tablesgenerator.com/markdown_tables) - This website was used in order to easily design the tables used in this README.md document.
+
+[Shields IO](https://shields.io/) - Used in order to place the badges seen within this README.
+
+[Balsamiq](https://balsamiq.com/) - This piece of software was used in order to create the wireframes shown in the [design](#design) section.
+
+[Adobe Color](https://color.adobe.com/create/image) -  Was used in order to extract the sites colour scheme from the images.
+
+[Lucid Chart](https://www.lucidchart.com/pages/landing?utm_source=google&utm_medium=cpc&utm_campaign=_chart_en_tier1_mixed_search_brand_exact_&km_CPC_CampaignId=1490375427&km_CPC_AdGroupID=55688909257&km_CPC_Keyword=lucid%20charts&km_CPC_MatchType=e&km_CPC_ExtensionID=&km_CPC_Network=g&km_CPC_AdPosition=&km_CPC_Creative=442433236001&km_CPC_TargetID=kwd-64262996435&km_CPC_Country=1006818&km_CPC_Device=c&km_CPC_placement=&km_CPC_target=&gad_source=1&gclid=CjwKCAiAq4KuBhA6EiwArMAw1EPQV211KvYtjxyuul8wxZInPFwWe86MEzyW9NiFahIk84N9eQe04BoC6f8QAvD_BwE) - Was used in order to create the database diagram within the [database design](#database-design)
+
+### Media
+
+Images used for the default/demo products were taken from the Amazon.co.uk website.
