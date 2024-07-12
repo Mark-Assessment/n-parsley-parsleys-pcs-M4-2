@@ -17,7 +17,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG") == 'True'
 
-ALLOWED_HOSTS = ['parsleypcs-e697de04d1ce.herokuapp.com', 'localhost', '127.0.0.1', 'https://ui.dev/']
+ALLOWED_HOSTS = ['parsleypcs-e697de04d1ce.herokuapp.com', 'localhost', '127.0.0.1']
 
 # STRIPE KEYS
 STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_PUBLIC_KEY")
