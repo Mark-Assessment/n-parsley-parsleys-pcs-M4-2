@@ -34,6 +34,33 @@ View the live project [Here!](https://parsleypcs-e697de04d1ce.herokuapp.com/)
     - [**Back-End Technologies**](#back-end-technologies)
     - [**Python Modules**](#python-modules)
     - [**Deployment Technologies**](#deployment-technologies)
+3. [**Testing**](#testing)
+    - [**Automated Testing**](#automated-testing)
+        - [**Unit Tests**](#unit-tests)
+        - [**Integration Tests**](#integration-tests)
+        - [**Testing with Coverage**](#testing-with-coverage)
+    - [**Manual Testing**](#manual-testing)
+    - [**Validation**](#validation)
+    - [**Compatibility**](#compatibility)
+4. [**Deployment**](#deployment)
+    - [**Steps for Deployment**](#steps-for-deployment)
+        - [**AWS S3 Bucket Setup for Media Files**](#aws-s3-bucket-setup-for-media-files)
+            - [**1. Create an AWS Account**](#1-create-an-aws-account)
+            - [**2. Create an S3 Bucket**](#2-create-an-s3-bucket)
+            - [**3. Set Bucket Policy**](#3-set-bucket-policy)
+            - [**4. Create an IAM User**](#4-create-an-iam-user)
+        - [**Set up Heroku Deployment**](#set-up-heroku-deployment)
+            - [**1. Create a Heroku Account**](#1-create-a-heroku-account)
+            - [**2. Install Heroku CLI**](#2-install-heroku-cli)
+            - [**3. Deploy to Heroku**](#3-deploy-to-heroku)
+                - [**Create a Heroku App**](#create-a-heroku-app)
+                - [**Push Your Project to Heroku**](#push-your-project-to-heroku)
+                - [**Set Up Heroku Config Vars**](#set-up-heroku-config-vars)
+                - [**Run Migrations**](#run-migrations)
+                - [**Create a Superuser**](#create-a-superuser)
+                - [**Collect Static Files**](#collect-static-files)
+                - [**Open Your App**](#open-your-app)
+
 
 ---
 
@@ -214,3 +241,293 @@ In this section I will highlight and explain the use of each additional python p
     - [Heroku](https://www.heroku.com/) - Heroku was used to deploy and host the application in the cloud.
 - ![AWS S3](https://img.shields.io/static/v1?label=AWS%20S3&message=%20&color=232F3E&logo=amazon-aws&logoColor=ffffff)
     - [AWS S3](https://aws.amazon.com/s3/) - AWS S3 was used to store and serve static and media files.
+
+## Testing
+
+Testing was a crucial part of the development process to ensure that the application works as expected and provides a good user experience. The following testing strategies were used:
+
+### Automated Testing
+
+Automated testing was performed using Django's built-in testing framework. The following types of tests were implemented:
+
+1. #### Unit Tests: 
+    - **Models**: Tests were written to ensure that all models behave as expected, including proper field validation and relationships.
+    - **Views**: Tests were created to check that views return the correct responses and render the appropriate templates.
+    - **Forms**: Form tests were conducted to validate form data and ensure that form submissions work correctly.
+
+2. #### Integration Tests:
+    - **User Authentication**: Tests were written to verify the user registration, login, and logout functionalities.
+    - **Product Management**: Tests were implemented to ensure that product creation, updating, and deletion work correctly.
+
+To run the automated tests, the following command was used:
+
+```bash
+python manage.py test
+```
+
+#### Testing with Coverage
+
+To ensure comprehensive testing of the Django project, the `coverage` tool was used.  
+The steps below highlight how the coverage tests were ran:
+
+##### Step 1: Install Coverage
+
+Coverage was first installed using the following command
+
+```bash
+pip install coverage
+```
+
+##### Step 2: Run Tests with Coverage
+
+From the root directory of the project, the following command was used in order to create a coverage test state
+
+```bash
+coverage run --source='.' manage.py test
+```
+
+##### Step 3: Generate Coverage Report
+
+The report from the coverage testing was acquired using the following command.
+
+```bash
+coverage report
+```
+
+##### Example Coverage Output
+
+```bash
+Name                                             Stmts   Miss  Cover
+--------------------------------------------------------------------
+cart/__init__.py                                     0      0   100%
+cart/admin.py                                        3      0   100%
+cart/apps.py                                         4      0   100%
+cart/context_processors.py                          16      0   100%
+cart/migrations/0001_initial.py                      7      0   100%
+cart/migrations/0002_alter_cartitem_user.py          6      0   100%
+cart/migrations/0003_cartitem_session_key.py         4      0   100%
+cart/migrations/__init__.py                          0      0   100%
+cart/models.py                                      15      1    93%
+cart/tests.py                                       60      0   100%
+cart/urls.py                                         3      0   100%
+cart/views.py                                       56     11    80%
+checkout/__init__.py                                 0      0   100%
+checkout/admin.py                                    3      0   100%
+checkout/apps.py                                     4      0   100%
+checkout/forms.py                                    6      0   100%
+checkout/migrations/0001_initial.py                  7      0   100%
+checkout/migrations/0002_auto_20240707_2157.py       5      0   100%
+checkout/migrations/0003_auto_20240710_1959.py       4      0   100%
+checkout/migrations/0004_order_session_key.py        4      0   100%
+checkout/migrations/0005_alter_order_user.py         6      0   100%
+checkout/migrations/0006_auto_20240711_2100.py       4      0   100%
+checkout/migrations/__init__.py                      0      0   100%
+checkout/models.py                                  18      0   100%
+checkout/tests.py                                   45      0   100%
+checkout/urls.py                                     3      0   100%
+checkout/views.py                                   54     13    76%
+env.py                                              10      5    50%
+home/__init__.py                                     0      0   100%
+home/admin.py                                        1      0   100%
+home/apps.py                                         4      0   100%
+home/middleware.py                                  15      0   100%
+home/migrations/__init__.py                          0      0   100%
+home/models.py                                       1      0   100%
+home/templatetags/__init__.py                        0      0   100%
+home/templatetags/currency.py                       15      2    87%
+home/templatetags/custom_filters.py                  5      0   100%
+home/tests.py                                       41      0   100%
+home/urls.py                                         3      0   100%
+home/utils.py                                        2      2     0%
+home/views.py                                       19      3    84%
+manage.py                                           11      2    82%
+parsleypcs/__init__.py                               0      0   100%
+parsleypcs/asgi.py                                   4      4     0%
+parsleypcs/settings.py                              49     30    39%
+parsleypcs/urls.py                                   6      0   100%
+parsleypcs/wsgi.py                                   4      4     0%
+products/__init__.py                                 0      0   100%
+products/admin.py                                   15      0   100%
+products/apps.py                                     4      0   100%
+products/forms.py                                   10      0   100%
+products/migrations/0001_initial.py                  6      0   100%
+products/migrations/0002_auto_20240624_1354.py       4      0   100%
+products/migrations/0003_product_rating.py           4      0   100%
+products/migrations/0004_case_storage.py             5      0   100%
+products/migrations/__init__.py                      0      0   100%
+products/models.py                                 125      6    95%
+products/tests.py                                   93      0   100%
+products/urls.py                                     3      0   100%
+products/views.py                                   38      3    92%
+profiles/__init__.py                                 0      0   100%
+profiles/admin.py                                    3      0   100%
+profiles/apps.py                                     4      0   100%
+profiles/forms.py                                    6      0   100%
+profiles/migrations/0001_initial.py                  7      0   100%
+profiles/migrations/0002_auto_20240711_2105.py       4      0   100%
+profiles/migrations/__init__.py                      0      0   100%
+profiles/models.py                                  16      0   100%
+profiles/tests.py                                   50      0   100%
+profiles/urls.py                                     3      0   100%
+profiles/views.py                                   16      0   100%
+--------------------------------------------------------------------
+TOTAL                                              943     86    91%
+```
+
+As we can see there was a total coverage of 91% with most files being fully tested, therefore I have confidence that my views, models and forms work as expected.
+
+### Manual Testing
+
+In addition to automated testing, manual testing was performed to ensure that the application functions correctly.
+
+### Validation
+
+**Page Speed Insights**
+
+The [Page Speed Insights](https://pagespeed.web.dev/analysis/https-trelawney-crafts-174a0a88326e-herokuapp-com/dx9d990dv4?form_factor=desktop) tool was used in order to check the website against different criteria to ensure it performs well, is suitably accessible and performs well.
+
+Please see the screenshot below for the returned scores.
+
+<p align="center">
+<img src="./testing/page-speed-insights.png">
+</p>
+
+I believe the site's low performance is due to the product images that are displayed on most pages. The images uploaded for products were not optimised for web display with some having rather large file sizes.
+
+
+### Compatibility
+
+The sites compatability was tested across multiple devices, using my own personal devices, those of friends & family, as well as emulated devices.
+
+Below is a testing matrix created in order to show what tests were conducted across devices and web browsers
+
+| Colour | Meaning |
+|:---:|:---:|
+| ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | Works Perfectly, No Immediate Issues |
+| ![#FFC300](https://via.placeholder.com/15/FFC300/FFC300) | Works mostly as intended |
+| ![#EE4B2B](https://via.placeholder.com/15/EE4B2B/EE4B2B) | Contains some issues |
+
+| Browser | Device | Responsive | Links Work As Intended | Images Displayed | Back End Functionality | Easily Navigable |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Chrome | iPhone 12 | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) |
+| Chrome | MacBook Pro | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) |
+| Chrome | Windows Laptop | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) |
+| Safari | MacBook Pro | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) |
+| Safari | iPhone 12 | ![#FFC300](https://via.placeholder.com/15/FFC300/FFC300) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) |
+| Firefox | Raspberry Pi | ![#FFC300](https://via.placeholder.com/15/FFC300/FFC300) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) |
+| Chromium | Raspberry Pi | ![#FFC300](https://via.placeholder.com/15/FFC300/FFC300) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) | ![#00ff00](https://via.placeholder.com/15/00ff00/00ff00) |
+
+## Deployment
+
+The project was deployed using Heroku, a platform-as-a-service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud.
+
+### Steps for Deployment
+
+#### AWS S3 Bucket Setup for Media Files
+
+To store media files on AWS S3, follow these steps:
+
+##### 1. Create an AWS Account
+   - If you don't already have an AWS account, create one at [AWS](https://aws.amazon.com/).
+
+##### 2. Create an S3 Bucket
+   - Go to the S3 service in the AWS Management Console and create a new bucket.
+   - Choose a globally unique name for your bucket.
+   - Select the region closest to your application server for optimal performance.
+   - Uncheck "Block all public access" to ensure media files can be accessed publicly.
+
+##### 3. Set Bucket Policy
+   - Set a bucket policy to allow public read access to your files.
+   - Example bucket policy:
+```json
+   {
+       "Version": "2012-10-17",
+       "Statement": [
+           {
+               "Sid": "PublicReadGetObject",
+               "Effect": "Allow",
+               "Principal": "*",
+               "Action": "s3:GetObject",
+               "Resource": "arn:aws:s3:::your-bucket-name/*"
+           }
+       ]
+   }
+```
+
+##### 4. Create an IAM User
+   - Go to the IAM service in the AWS Management Console and create a new user.
+   - Attach the `AmazonS3FullAccess` policy to this user to give full access to S3.
+
+
+#### Set up Heroku Deployment
+
+#### 1. **Create a Heroku Account**
+   - Go to [Heroku](https://www.heroku.com/) and create an account if you don't already have one.
+
+#### 2. **Install Heroku CLI**
+   - Install the Heroku CLI on your machine. You can follow the instructions provided on the [Heroku Dev Center](https://devcenter.heroku.com/articles/heroku-cli).
+
+
+
+#### 3. **Deploy to Heroku**
+
+##### Create a Heroku App
+   - Use the Heroku CLI to create a new app.
+
+   ```bash
+   heroku create parsleypcs
+   ```
+
+##### Push Your Project to Heroku
+   - Deploy your project to Heroku by pushing your code.
+
+   ```bash
+   git push heroku main
+   ```
+
+##### Set Up Heroku Config Vars
+   - Set up your environment variables in Heroku. This includes `SECRET_KEY`, `DEBUG`, `DATABASE_URL`, and any other variables your project requires.
+
+   ```bash
+    heroku config:set SECRET_KEY='your-secret-key'
+    heroku config:set DEBUG='True'
+    heroku config:set STRIPE_PUBLIC_KEY='your-stripe-public-key'
+    heroku config:set STRIPE_SECRET_KEY='your-stripe-secret-key'
+    heroku config:set DATABASE_URL='your-database-url'
+    heroku config:set AWS_ACCESS_KEY_ID='your-aws-access-key-id'
+    heroku config:set AWS_SECRET_ACCESS_KEY='your-aws-secret-access-key'
+    heroku config:set AWS_STORAGE_BUCKET_NAME='your-aws-storage-bucket-name'
+    heroku config:set AWS_S3_REGION_NAME='your-aws-s3-region-name'
+   ```
+
+   This step can also be done under the 'Settings' Page inside the app on your web browser.
+
+##### Run Migrations
+   - Apply the database migrations on Heroku.
+
+   ```
+   heroku run python manage.py migrate
+   ```
+
+##### Create a Superuser
+   - Create a superuser to access the Django admin on the deployed site.
+
+   ```
+   heroku run python manage.py createsuperuser
+   ```
+
+##### Collect Static Files
+   - Collect static files to ensure they are served correctly in production.
+
+   ```
+   heroku run python manage.py collectstatic
+   ```
+
+##### Open Your App
+   - Open the deployed app in a web browser.
+
+   ```
+   heroku open
+   ```
+
+The Django application should now be successfully deployed on Heroku and configured to use AWS S3 for media file storage.
