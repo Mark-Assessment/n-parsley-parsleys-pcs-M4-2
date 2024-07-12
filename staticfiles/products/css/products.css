@@ -1,0 +1,161 @@
+:root {
+  --featured: #0ca41b;
+}
+
+input,
+select {
+  width: 100%;
+  height: 44px;
+  background-color: #e4e4e4;
+  border-radius: 0.5rem;
+  padding: 0 1rem;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  transition: border-color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+    color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+    background 0.2s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  /* font-weight: bold; */
+  color: black;
+  transition: color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+}
+
+input:hover,
+input:focus,
+input-group:hover input {
+  outline: none;
+  border-color: #05060f;
+}
+
+input-group:hover label,
+input:focus {
+  color: #05060fc2;
+}
+
+h1 {
+  color: black;
+  padding-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.main-page-content {
+    background-color: rgb(241, 241, 241);
+}
+
+.card {
+  height: 340px; /* Adjusted height as needed */
+  padding: 0.8em;
+  background: #f5f5f5;
+  position: relative;
+  overflow: visible;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+}
+
+.card a {
+  width: 100%;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 0.5rem;
+  transition: 0.3s ease;
+  flex-shrink: 0;
+}
+
+.card-img img {
+  width: 100%;
+}
+
+.card-info {
+  padding-top: 10%;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.card-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+  margin-top: auto;
+}
+
+.filter-form {
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.text-title {
+  font-weight: 900;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+.text-body {
+  font-size: 0.9em;
+  padding-bottom: 10px;
+}
+
+/*Button*/
+.card-button {
+  display: flex;
+  padding: 0.1rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  transform: scale(1.02);
+}
+
+.card.featured {
+  border: 2px solid var(--featured);
+  position: relative;
+}
+
+.featured-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--featured);
+  color: var(--text-color);
+  padding: 0.2em 0.5em;
+  font-size: 0.8em;
+  font-weight: bold;
+  border-bottom-right-radius: 0.5em;
+}
+
+.stars {
+  display: flex;
+}
+
+.stars i {
+  color: #ffd700;
+}
+
+.stars i.empty {
+  color: #e0e0e0;
+}
+
+.filter-button-div {
+  width: 100%;
+  text-align: center;
+}
+
+.filter-button-div button {
+  width: 30%;
+  margin: 0 auto;
+}
