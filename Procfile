@@ -1,0 +1,1 @@
+web: gunicorn parsleypcs.wsgi:application
