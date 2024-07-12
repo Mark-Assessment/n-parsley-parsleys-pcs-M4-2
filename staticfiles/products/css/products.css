@@ -76,6 +76,7 @@ h1 {
 .card-img img {
   width: auto;
   max-height: 150px;
+  max-width: 100%;
 }
 
 .card-info {
