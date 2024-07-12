@@ -28,6 +28,12 @@ View the live project [Here!](https://parsleypcs-e697de04d1ce.herokuapp.com/)
         - [**Typography**](#typography)
     - [**Wireframes**](#wireframes)
     - [**Database Design**](#database-design)
+2. [**Technologies Used**](#technologies-used)
+    - [**Development Technologies**](#development-technologies)
+    - [**Front-End Technologies**](#front-end-technologies)
+    - [**Back-End Technologies**](#back-end-technologies)
+    - [**Python Modules**](#python-modules)
+    - [**Deployment Technologies**](#deployment-technologies)
 
 ---
 
@@ -157,3 +163,54 @@ As different PC parts will require different technical paramaters, class inherit
 <div align=center>
     <img src="./design/database-erd.png" >
 </div>
+
+## Technologies Used
+
+### Development Technologies
+
+- ![Balsamiq Wireframes](https://img.shields.io/static/v1?label=Balsamiq&message=4.7.4&color=CC0200)
+    - [Balsamiq](https://balsamiq.com/) - Balsamiq was used in order to create intuitive wireframes during the initial design process.
+- ![GitHub](https://img.shields.io/static/v1?label=GitHub&message=Natte2110&color=181717&logo=github&logoColor=ffffff)
+    - [GitHub](https://github.com/) - GitHub was used to store and manage the project within a combined online repository.
+- ![Visual Studio Code](https://img.shields.io/static/v1?label=VS%20Code&message=1.85.1&color=007ACC&logo=visual%20studio%20code&logoColor=ffffff)
+    - [VS Code](https://code.visualstudio.com/) - Visual Studio Code was used as the primary development environment for the project.
+
+### Front-End Technologies
+
+- ![HTML5](https://img.shields.io/static/v1?label=HTML&message=5&color=E34F26&logo=html5&logoColor=ffffff)
+    - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5) - HTML5 was used as the primary markup language in order to structure and display the elements on the page.
+- ![CSS3](https://img.shields.io/static/v1?label=CSS&message=3&color=1572B6&logo=css3&logoColor=ffffff)
+    - [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3) - CSS Was used in order to provide styling to the web pages with custom colours and sizes of elements.
+- ![Bootstrap 4.3.1](https://img.shields.io/static/v1?label=Bootstrap&message=4.3.1&color=563d7c)
+    - [Bootstrap 4.3.1](https://getbootstrap.com/docs/4.3/getting-started/introduction/) - Bootstrap was used to quickly design and create the layout and look of the website.
+- ![jQuery 3.3.1](https://img.shields.io/static/v1?label=jQuery&message=3.3.1&color=0769AD&logo=jquery&logoColor=ffffff)
+    - [jQuery 3.3.1](https://code.jquery.com/jquery/) - jQuery was used in conjunction with bootstrap to apply javascript selectors and updating elements more efficiently.
+
+### Back-End Technologies
+
+- ![Python](https://img.shields.io/static/v1?label=Python&message=3.11.2&color=blue&logo=python&logoColor=ffffff)
+    - [Python 3.11.2](https://www.python.org/) - Python was used as the back-end management language to pass and handle data to and from the application.
+- ![Django](https://img.shields.io/static/v1?label=Django&message=3.2&color=092E20&logo=django&logoColor=ffffff)
+    - [Django 3.2](https://www.djangoproject.com/) - Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design. It was used to build the back-end of the application.
+- ![PostgreSQL 16.1](https://img.shields.io/static/v1?label=PostgreSQL&message=16.1&color=336791&logo=postgresql)
+    - [PostgreSQL 16.1](https://www.postgresql.org/) - PostgreSQL was used as the database in this project in order to store information regarding users, products, and orders.
+
+### Python Modules
+
+In this section I will highlight and explain the use of each additional python package that was used within this project.
+
+- ![Django AllAuth](https://img.shields.io/static/v1?label=Django%20AllAuth&message=0.44.0&color=092E20&logo=django&logoColor=ffffff)
+    - [Django AllAuth 0.44.0](https://django-allauth.readthedocs.io/en/latest/) - Django AllAuth was used to manage user registrations, logins, and authentication.
+- ![Whitenoise](https://img.shields.io/static/v1?label=Whitenoise&message=5.3.0&color=092E20&logo=django&logoColor=ffffff)
+    - [Whitenoise 5.3.0](http://whitenoise.evans.io/en/stable/) - Whitenoise was used to serve static files in production.
+- ![Gunicorn](https://img.shields.io/static/v1?label=Gunicorn&message=20.1.0&color=092E20&logo=gunicorn&logoColor=ffffff)
+    - [Gunicorn 20.1.0](https://gunicorn.org/) - Gunicorn was used as the WSGI HTTP server for serving the Django application in production.
+- ![Boto3](https://img.shields.io/static/v1?label=Boto3&message=1.18.57&color=092E20&logo=aws&logoColor=ffffff)
+    - [Boto3 1.18.57](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) - Boto3 was used to interact with AWS S3 for storing media files.
+
+### Deployment Technologies
+
+- ![Heroku](https://img.shields.io/static/v1?label=Heroku&message=7.53.0&color=430098&logo=heroku&logoColor=ffffff)
+    - [Heroku](https://www.heroku.com/) - Heroku was used to deploy and host the application in the cloud.
+- ![AWS S3](https://img.shields.io/static/v1?label=AWS%20S3&message=%20&color=232F3E&logo=amazon-aws&logoColor=ffffff)
+    - [AWS S3](https://aws.amazon.com/s3/) - AWS S3 was used to store and serve static and media files.
