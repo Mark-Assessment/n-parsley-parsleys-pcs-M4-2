@@ -9,13 +9,13 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/Natte2110/CI-Milestone-04?color=orange) ![GitHub pull requests](https://img.shields.io/github/issues-pr/Natte2110/CI-Milestone-04)
 
-This is a project for the Code Institute Milestone Project 4. Parsley PCs is an e-commerce site that enables users to purchase individual computer parts, or to build an entire PC interactively.
+This is a project for the Code Institute Milestone Project 4. Parsley PCs is an e-commerce site that enables users to purchase individual computer parts.
 
 The users of this website will be able to create an account, browse current available products and offers, and interactively build a PC with parts of their choice that can be built and delivered to them.
 
 The users will be able to create accounts and track their cart/orders, or simply browse and purchase items as a guest.
 
-View the live project [Placeholder!](https://github.com/Natte2110/CI-Milestone-04)
+View the live project [Here!](https://parsleypcs-e697de04d1ce.herokuapp.com/)
 
 ---
 
