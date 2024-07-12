@@ -38,8 +38,8 @@ class Product(models.Model):
     """
     category = models.ForeignKey('Category', on_delete=models.CASCADE)
     brand = models.ForeignKey('Brand', on_delete=models.CASCADE)
-    sku = models.CharField(max_length=32, null=False, unique=True)
-    name = models.CharField(max_length=32, null=False, unique=True)
+    sku = models.CharField(max_length=64, null=False, unique=True)
+    name = models.CharField(max_length=64, null=False, unique=True)
     description = models.TextField(max_length=3000, null=False, blank=False)
     available_quantity = models.IntegerField(null=False, blank=False)
     price = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False)
