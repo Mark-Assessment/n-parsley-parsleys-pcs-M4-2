@@ -1,4 +1,7 @@
 import stripe
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 from django.conf import settings
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
@@ -109,5 +112,13 @@ def order_success(request, order_id):
         order = get_object_or_404(Order, id=order_id, user__isnull=True, session_key=session_key)
         # Delete cart items for guest user after successful order
         CartItem.objects.filter(session_key=session_key, purchased=False).delete()
+
+    subject = 'Order Confirmation'
+    html_message = render_to_string('checkout/order_confirmation_email.html', {'order': order})
+    plain_message = strip_tags(html_message)
+    from_email = settings.DEFAULT_FROM_EMAIL
+    to_email = request.user.email if request.user.is_authenticated else order.email
+
+    send_mail(subject, plain_message, from_email, [to_email], html_message=html_message)
 
     return render(request, 'checkout/order_success.html', {'order': order})

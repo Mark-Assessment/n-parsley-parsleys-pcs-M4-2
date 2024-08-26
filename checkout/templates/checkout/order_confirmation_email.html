@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .order-summary {
+            margin-top: 20px;
+        }
+        .list-group {
+            list-style-type: none;
+            padding: 0;
+        }
+        .list-group-item {
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            background-color: #fafafa;
+        }
+        .list-group-item strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .btn-primary, .btn-secondary {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: #fff;
+        }
+        .btn-primary {
+            background-color: #007bff;
+        }
+        .btn-secondary {
+            background-color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Order Successful</h1>
+        <h2>Thank you for your purchase!</h2>
+        <p>Your order has been successfully placed.</p>
+        
+        <div class="order-summary">
+            <h4>Order Summary</h4>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Order Number:</strong> {{ order.id }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Total Amount:</strong> {{ order.total_amount|floatformat:2|convert_price:request.conversion_info }}
+                </li>
+                <li class="list-group-item">
+                    <strong>Shipping Address:</strong>
+                    <p>
+                        {{ order.address_line_1 }}<br>
+                        {{ order.city }}<br>
+                        {{ order.postcode }}<br>
+                        {{ order.country }}
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
