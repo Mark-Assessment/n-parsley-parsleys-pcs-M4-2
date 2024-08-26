@@ -97,9 +97,6 @@ LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'parsleypcs.wsgi.application'
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-DEFAULT_FROM_EMAIL = 'info@parsleypcs.com'
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 DATABASES = {
