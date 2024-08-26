@@ -167,6 +167,7 @@ if 'DEVELOPMENT' in os.environ:
 else:
     EMAIL_BACKEND = 'home.backends.CustomEmailBackend'
     EMAIL_USE_TLS = True
+    EMAIL_SSL_KEYFILE = None
     EMAIL_PORT = 587
     EMAIL_HOST = 'smtp.gmail.com'
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
