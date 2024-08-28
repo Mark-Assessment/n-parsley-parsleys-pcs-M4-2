@@ -460,6 +460,22 @@ The python files were tested using the CI Python Linter. Each file was tested an
 
 </details>
 
+<details>
+<summary>Checkout App</summary>
+
+**Admin**
+<img src="./testing/python/checkout/admin.png">
+**Models**
+<img src="./testing/python/checkout/models.png">
+**Tests**
+<img src="./testing/python/checkout/tests.png">
+**URLs**
+<img src="./testing/python/checkout/urls.png">
+**Views**
+<img src="./testing/python/checkout/views.png">
+
+</details>
+
 **Page Speed Insights**
 
 The [Page Speed Insights](https://pagespeed.web.dev/analysis/https-trelawney-crafts-174a0a88326e-herokuapp-com/dx9d990dv4?form_factor=desktop) tool was used in order to check the website against different criteria to ensure it performs well, is suitably accessible and performs well.

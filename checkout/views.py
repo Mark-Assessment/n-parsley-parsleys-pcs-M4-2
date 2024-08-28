@@ -15,15 +15,18 @@ from decimal import Decimal
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
+
 def checkout(request):
     if request.user.is_authenticated:
-        cart_items = CartItem.objects.filter(user=request.user, purchased=False)
+        cart_items = CartItem.objects.filter(
+            user=request.user, purchased=False)
     else:
         session_key = request.session.session_key
         if not session_key:
             request.session.create()
             session_key = request.session.session_key
-        cart_items = CartItem.objects.filter(session_key=session_key, purchased=False)
+        cart_items = CartItem.objects.filter(
+            session_key=session_key, purchased=False)
 
     total = sum(item.total_price for item in cart_items)
 
@@ -61,12 +64,14 @@ def checkout(request):
                         'product_data': {
                             'name': item.product.name,
                         },
-                        'unit_amount': int((item.product.price * conversion_rate) * 100),
+                        'unit_amount': int(
+                            (item.product.price * conversion_rate) * 100),
                     },
                     'quantity': item.quantity,
                 } for item in cart_items],
                 mode='payment',
-                success_url=request.build_absolute_uri(reverse('order_success', kwargs={'order_id': order.id})),
+                success_url=request.build_absolute_uri(
+                    reverse('order_success', kwargs={'order_id': order.id})),
                 cancel_url=request.build_absolute_uri(reverse('checkout')),
                 metadata={
                     'order_id': order.id,
@@ -101,6 +106,7 @@ def checkout(request):
         'stripe_public_key': settings.STRIPE_PUBLIC_KEY,
     })
 
+
 @require_GET
 def order_success(request, order_id):
     if request.user.is_authenticated:
@@ -109,16 +115,25 @@ def order_success(request, order_id):
         CartItem.objects.filter(user=request.user, purchased=False).delete()
     else:
         session_key = request.session.session_key
-        order = get_object_or_404(Order, id=order_id, user__isnull=True, session_key=session_key)
+        order = get_object_or_404(
+            Order, id=order_id, user__isnull=True, session_key=session_key)
         # Delete cart items for guest user after successful order
-        CartItem.objects.filter(session_key=session_key, purchased=False).delete()
+        CartItem.objects.filter(
+            session_key=session_key, purchased=False).delete()
 
     subject = 'Order Confirmation'
-    html_message = render_to_string('checkout/order_confirmation_email.html', {'order': order})
+    html_message = render_to_string(
+        'checkout/order_confirmation_email.html', {'order': order})
     plain_message = strip_tags(html_message)
     from_email = settings.DEFAULT_FROM_EMAIL
     to_email = request.user.email if request.user.is_authenticated else order.email
 
-    send_mail(subject, plain_message, from_email, [to_email], html_message=html_message)
+    send_mail(
+        subject,
+        plain_message,
+        from_email,
+        [to_email],
+        html_message=html_message
+        )
 
     return render(request, 'checkout/order_success.html', {'order': order})

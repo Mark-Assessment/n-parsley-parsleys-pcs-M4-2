@@ -8,6 +8,7 @@ from products.models import Product, Brand, Category
 
 User = get_user_model()
 
+
 class OrderModelTest(TestCase):
     def test_order_creation(self):
         user = User.objects.create_user(username='testuser', password='12345')
@@ -23,6 +24,7 @@ class OrderModelTest(TestCase):
         )
         self.assertEqual(order.__str__(), f"Order {order.id} by {order.user}")
         self.assertEqual(order.total_amount, 100.00)
+
 
 class CheckoutFormTest(TestCase):
     def test_valid_form(self):
@@ -51,10 +53,12 @@ class CheckoutFormTest(TestCase):
         form = CheckoutForm(data=data)
         self.assertFalse(form.is_valid())
 
+
 class CheckoutViewTest(TestCase):
     def setUp(self):
         self.client = Client()
-        self.user = User.objects.create_user(username='testuser', password='12345')
+        self.user = User.objects.create_user(
+            username='testuser', password='12345')
         self.brand = Brand.objects.create(name='Test Brand')
         self.category = Category.objects.create(name='Test Category')
         self.product = Product.objects.create(
