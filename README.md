@@ -585,6 +585,53 @@ Unfortunately, some features such as User Reviews and the interactive PC Builder
 
 This section outlines how key Django features were used in the development of the site.
 
+### Middleware
+
+In order to implement the currency changing functionality on the site, I included my own middleware.py that sits within the home app. This handles the currency conversion and ensures that the prices in the users cart are displayed with the correct symbol and cost.
+
+If I was to develop this further, I would have it gather the current exchange rates from an online source as these are dynamic values normally.
+
+### Template Tags
+
+A custom template tag was also included to ensure these currency discrepencies could be correctly rendered within the templates that used them.
+
+To ensure these were loaded correclty, the below template logic was added to the files that required it.
+
+```
+{% load currency %}
+```
+
+This ensured that the template tag called currency.py was loaded correctly.
+
+```python
+from django import template
+from decimal import Decimal
+
+register = template.Library()
+
+currency_symbols = {
+    'GBP': '£',
+    'USD': '$',
+    'EUR': '€',
+}
+
+@register.filter(name='convert_price')
+def convert_price(value, currency_info):
+    """
+    Converts a price to the specified currency using the conversion rate and symbol.
+    """
+    try:
+        currency, conversion_rate = currency_info.split(':')
+        value = Decimal(value)
+        conversion_rate = Decimal(conversion_rate)
+        converted_value = value * conversion_rate
+        symbol = currency_symbols.get(currency, '$')
+        return f"{symbol}{converted_value:,.2f}"
+    except (ValueError, TypeError, InvalidOperation):
+        return value 
+
+```
+
 ### Models
 
 Django’s Object-Relational Mapping (ORM) was extensively used to define and manage the data structures of the application. Custom models were created to represent the following entities:
