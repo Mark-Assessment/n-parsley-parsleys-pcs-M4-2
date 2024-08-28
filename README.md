@@ -68,6 +68,7 @@ View the live project [Here!](https://parsleypcs-e697de04d1ce.herokuapp.com/)
 5. [**Credits**](#credits)
     - [**Tools And Software**](#tools-and-software)
     - [**Media**](#media)
+6. [**Future Development**](#future-development)
 
 
 ---
@@ -771,3 +772,11 @@ These different tools were used either in the development or documentation proce
 ### Media
 
 Images used for the default/demo products were taken from the Amazon.co.uk website.
+
+## Future Development
+
+Unfortunately I was not quite able to include all of the features I wished to in this project. Please see a list below of features or improvements that would be added in the future.
+
+- **User Reviews** - The ability for users to add, edit or remove reviews on an item.
+- **'Build Your Own' Functionality** - The original plan was to have an interactive PC building page where users could drag parts onto a PC to create their own interactively.
+- **Page for Site Admins** - A seperate page for site admins to be able to manage the sites contents and products without needing to access the Django admin page.
