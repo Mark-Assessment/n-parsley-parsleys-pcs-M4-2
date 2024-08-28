@@ -429,6 +429,37 @@ Warnings were returned, however these were due to rules such as `-webkit-text-si
 
 </details>
 
+### Python Validation
+
+The python files were tested using the CI Python Linter. Each file was tested and adjusted if it didn't conform to PEP8 standards. I have split each section down into dropdowns below.
+
+<details>
+<summary>ParsleyPCs (Main Files)</summary>
+
+<img src="./testing/python/parsleypcs/settings.png">
+
+</details>
+
+<details>
+<summary>Cart App</summary>
+
+**Admin**
+<img src="./testing/python/cart/admin.png">
+**Apps**
+<img src="./testing/python/cart/apps.png">
+**Context processors**
+<img src="./testing/python/cart/context_processors.png">
+**Models**
+<img src="./testing/python/cart/models.png">
+**Tests**
+<img src="./testing/python/cart/tests.png">
+**URLs**
+<img src="./testing/python/cart/urls.png">
+**Views**
+<img src="./testing/python/cart/views.png">
+
+</details>
+
 **Page Speed Insights**
 
 The [Page Speed Insights](https://pagespeed.web.dev/analysis/https-trelawney-crafts-174a0a88326e-herokuapp-com/dx9d990dv4?form_factor=desktop) tool was used in order to check the website against different criteria to ensure it performs well, is suitably accessible and performs well.
