@@ -6,10 +6,12 @@ from products.models import Product, Brand, Category
 
 User = get_user_model()
 
+
 class CartTests(TestCase):
     def setUp(self):
         self.client = Client()
-        self.user = User.objects.create_user(username='testuser', password='12345')
+        self.user = User.objects.create_user(
+            username='testuser', password='12345')
         self.brand = Brand.objects.create(name='Test Brand')
         self.category = Category.objects.create(name='Test Category')
         self.product = Product.objects.create(
@@ -30,9 +32,13 @@ class CartTests(TestCase):
 
     def test_add_to_cart_logged_in(self):
         self.client.login(username='testuser', password='12345')
-        response = self.client.post(reverse('add_to_cart', args=[self.product.id]), {'quantity': 1})
+        response = self.client.post(
+            reverse(
+                'add_to_cart', args=[self.product.id]
+                ), {'quantity': 1})
         self.assertEqual(response.status_code, 302)
-        self.assertTrue(CartItem.objects.filter(user=self.user, product=self.product).exists())
+        self.assertTrue(CartItem.objects.filter(
+            user=self.user, product=self.product).exists())
 
     def test_add_to_cart_not_logged_in(self):
         session = self.client.session
@@ -41,9 +47,11 @@ class CartTests(TestCase):
         session.save()
 
         self.client.cookies['sessionid'] = session_key
-        response = self.client.post(reverse('add_to_cart', args=[self.product.id]), {'quantity': 1})
+        response = self.client.post(
+            reverse('add_to_cart', args=[self.product.id]), {'quantity': 1})
         self.assertEqual(response.status_code, 302)
-        self.assertTrue(CartItem.objects.filter(session_key=session_key, product=self.product).exists())
+        self.assertTrue(CartItem.objects.filter(
+            session_key=session_key, product=self.product).exists())
 
     def test_cart_detail_view_logged_in(self):
         self.client.login(username='testuser', password='12345')
@@ -73,9 +81,11 @@ class CartTests(TestCase):
 
     def test_remove_from_cart_logged_in(self):
         self.client.login(username='testuser', password='12345')
-        response = self.client.post(reverse('remove_from_cart', args=[self.cart_item.id]))
+        response = self.client.post(reverse(
+            'remove_from_cart', args=[self.cart_item.id]))
         self.assertEqual(response.status_code, 302)
-        self.assertFalse(CartItem.objects.filter(user=self.user, product=self.product).exists())
+        self.assertFalse(CartItem.objects.filter(
+            user=self.user, product=self.product).exists())
 
     def test_remove_from_cart_not_logged_in(self):
         session = self.client.session
@@ -91,6 +101,8 @@ class CartTests(TestCase):
         )
 
         self.client.cookies['sessionid'] = session_key
-        response = self.client.post(reverse('remove_from_cart', args=[cart_item.id]))
+        response = self.client.post(reverse(
+            'remove_from_cart', args=[cart_item.id]))
         self.assertEqual(response.status_code, 302)
-        self.assertFalse(CartItem.objects.filter(session_key=session_key, product=self.product).exists())
+        self.assertFalse(CartItem.objects.filter(
+            session_key=session_key, product=self.product).exists())
