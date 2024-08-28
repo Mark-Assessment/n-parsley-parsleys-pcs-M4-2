@@ -385,6 +385,50 @@ In addition to automated testing, manual testing was performed to ensure that th
 
 ### Validation
 
+### HTML Validation
+
+The sites HTML content was validated using the [W3C HTML](https://validator.w3.org/) Validator. As the validator does not recognise the Django templating language, the pages were checked via their URL's once the project was deployed.
+
+Any errors that were identified were rectified, and checked again once the project was redeployed.
+
+It was not possible to test all pages as the validator would not have access to an account or be able to place an order.
+
+<details>
+<summary>CLICK HERE to view screenshots of the html validation pages</summary>
+
+<img src="./testing/html/home-page.png">
+
+<img src="./testing/html/all-products.png">
+
+<img src="./testing/html/cart.png">
+
+<img src="./testing/html/register.png">
+
+<img src="./testing/html/login.png">
+
+</details>
+
+### CSS Validation
+
+The CSS was checked using the [W3C CSS](https://jigsaw.w3.org/css-validator/#validate_by_uri) Validation service and returned no critical errors.
+
+Warnings were returned, however these were due to rules such as `-webkit-text-size-adjust` being vendor extensions.
+
+<details>
+<summary>CLICK HERE to view screenshots of the css validation pages</summary>
+
+<img src="./testing/css/home-page.png">
+
+<img src="./testing/css/all-products.png">
+
+<img src="./testing/css/cart.png">
+
+<img src="./testing/css/register.png">
+
+<img src="./testing/css/login.png">
+
+</details>
+
 **Page Speed Insights**
 
 The [Page Speed Insights](https://pagespeed.web.dev/analysis/https-trelawney-crafts-174a0a88326e-herokuapp-com/dx9d990dv4?form_factor=desktop) tool was used in order to check the website against different criteria to ensure it performs well, is suitably accessible and performs well.
