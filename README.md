@@ -476,6 +476,30 @@ The python files were tested using the CI Python Linter. Each file was tested an
 
 </details>
 
+<details>
+<summary>Home App</summary>
+
+**Middleware**
+<img src="./testing/python/home/middleware.png">
+**URLs**
+<img src="./testing/python/home/urls.png">
+**Views**
+<img src="./testing/python/home/views.png">
+
+</details>
+
+<details>
+<summary>Products App</summary>
+
+**Models**
+<img src="./testing/python/products/models.png">
+**URLs**
+<img src="./testing/python/products/urls.png">
+**Views**
+<img src="./testing/python/products/views.png">
+
+</details>
+
 **Page Speed Insights**
 
 The [Page Speed Insights](https://pagespeed.web.dev/analysis/https-trelawney-crafts-174a0a88326e-herokuapp-com/dx9d990dv4?form_factor=desktop) tool was used in order to check the website against different criteria to ensure it performs well, is suitably accessible and performs well.

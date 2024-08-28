@@ -1,6 +1,7 @@
 from django.db import models
 from django.utils.text import slugify
 
+
 class Brand(models.Model):
     """
     Class to determine the brands of products available
@@ -40,16 +41,21 @@ class Product(models.Model):
     brand = models.ForeignKey('Brand', on_delete=models.CASCADE)
     sku = models.CharField(max_length=64, null=False, unique=True)
     name = models.CharField(max_length=64, null=False, unique=True)
-    description = models.TextField(max_length=3000, null=False, blank=False)
+    description = models.TextField(
+        max_length=3000, null=False, blank=False)
     available_quantity = models.IntegerField(null=False, blank=False)
-    price = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False)
+    price = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, blank=False)
     is_discounted = models.BooleanField(default=False)
-    discount_price = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)
+    discount_price = models.DecimalField(
+        max_digits=10, decimal_places=2, null=True, blank=True)
     is_featured = models.BooleanField(default=False)
     image_url = models.URLField(max_length=2000, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
-    slug = models.SlugField(max_length=250, null=False, unique=True, blank=False)
-    rating = models.DecimalField(max_digits=3, decimal_places=2, null=True, blank=True)
+    slug = models.SlugField(
+        max_length=250, null=False, unique=True, blank=False)
+    rating = models.DecimalField(
+        max_digits=3, decimal_places=2, null=True, blank=True)
 
     class Meta:
         verbose_name = "Product"
@@ -115,9 +121,11 @@ class Motherboard(Product):
     Class to define extra product information for motherboards
     '''
     form_factor = models.ForeignKey('FormFactor', on_delete=models.CASCADE)
-    ram_technology = models.ForeignKey('RAMTechnology', on_delete=models.CASCADE)
+    ram_technology = models.ForeignKey(
+        'RAMTechnology', on_delete=models.CASCADE)
     cpu_socket = models.ForeignKey('CPUSocket', on_delete=models.CASCADE)
-    memory_clock_speed = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False)
+    memory_clock_speed = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, blank=False)
 
     class Meta:
         verbose_name = "Motherboard"
@@ -129,7 +137,8 @@ class CPU(Product):
     Class to define product information for CPU's
     '''
     cpu_socket = models.ForeignKey('CPUSocket', on_delete=models.CASCADE)
-    cpu_speed = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False)
+    cpu_speed = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, blank=False)
     secondary_cache = models.IntegerField(null=False, blank=False)
     cache = models.IntegerField(null=False, blank=False)
     wattage = models.IntegerField(null=False, blank=False)
@@ -145,10 +154,12 @@ class RAM(Product):
     '''
     Class to define extra product information for RAM
     '''
-    ram_technology = models.ForeignKey('RAMTechnology', on_delete=models.CASCADE)
+    ram_technology = models.ForeignKey(
+        'RAMTechnology', on_delete=models.CASCADE)
     memory_size = models.IntegerField(null=False, blank=False)
     no_sticks = models.IntegerField(null=False, blank=False)
-    memory_speed = models.DecimalField(max_digits=10, decimal_places=2, null=False, blank=False)
+    memory_speed = models.DecimalField(
+        max_digits=10, decimal_places=2, null=False, blank=False)
 
     class Meta:
         verbose_name = "RAM"
@@ -180,6 +191,7 @@ class GPU(Product):
         verbose_name = "GPU"
         verbose_name_plural = "GPUs"
 
+
 class Case(Product):
     '''
     Class to define extra product information for cases
@@ -199,10 +211,12 @@ class Storage(Product):
     '''
     Class to define extra product information for storage
     '''
-    storage_type = models.CharField(max_length=32, null=False, blank=False)  # e.g., SSD, HDD
+    storage_type = models.CharField(max_length=32, null=False, blank=False)
     capacity = models.IntegerField(null=False, blank=False)  # in GB
-    read_speed = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)  # in MB/s
-    write_speed = models.DecimalField(max_digits=10, decimal_places=2, null=True, blank=True)  # in MB/s
+    read_speed = models.DecimalField(
+        max_digits=10, decimal_places=2, null=True, blank=True)  # in MB/s
+    write_speed = models.DecimalField(
+        max_digits=10, decimal_places=2, null=True, blank=True)  # in MB/s
 
     class Meta:
         verbose_name = "Storage"
