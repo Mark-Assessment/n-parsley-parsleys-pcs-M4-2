@@ -46,6 +46,7 @@ View the live project [Here!](https://parsleypcs-e697de04d1ce.herokuapp.com/)
         - [**Python**](#python-validation)
     - [**Compatibility**](#compatibility)
     - [**User Story Testing**](#user-story-testing)
+    - [**Django Features Used**](#django-features-used)
 4. [**Deployment**](#deployment)
     - [**Steps for Deployment**](#steps-for-deployment)
         - [**AWS S3 Bucket Setup for Media Files**](#aws-s3-bucket-setup-for-media-files)
@@ -578,6 +579,63 @@ Unfortunately, some features such as User Reviews and the interactive PC Builder
 | **29** | **Site Admin** | View all orders along with their completion status | Manage each order and ensure they are completed correctly | :white_check_mark: |
 | **30** | **Site Admin** | Manage reviews posted by users | Moderate the content, such as removing hateful or discrimatory messages | :x: |
 | **31** | **Site Admin** | Manage user accounts | Aid users that are having issues with their personal accounts | :white_check_mark: |
+
+## Django Features Used
+
+This section outlines how key Django features were used in the development of the site.
+
+### Models
+
+Django’s Object-Relational Mapping (ORM) was extensively used to define and manage the data structures of the application. Custom models were created to represent the following entities:
+
+-	Product Model: Represents individual products available on the site. Each product has attributes like name, price, description, category, and image.
+-	Order Model: Manages customer orders, storing details such as user, order_items, total_amount, and status.
+-	Cart Model: Keeps track of items added to the user’s cart, which can be checked out to create an order.
+-	User Profile Model: Extends Django’s default User model to store additional information like delivery addresses, order history, and user preferences.
+
+These files were created in models.py within each respective app and were based off the database design diagram in [this](#database-design) section.
+
+By creating the database tables pythonically, it was easy to ensure that the app itself would be able to store, read and manipulate data in the same way each time anything was added or changed.
+
+Finally, it enabled the use of Djangos built in field types and allowed for the restriction of possible data inputted by users on the site.
+
+### Views
+
+Custom Django views were created to manage the application’s workflow and handle user requests. Key views include:
+
+-	Product List View: Displays a list of available products, with filtering and sorting capabilities.
+-	Product Detail View: Provides detailed information about a single product, including related products.
+-	Cart View: Allows users to view and manage the items in their cart.
+-	Checkout View: Handles the checkout process, including payment integration with Stripe.
+-	Order Success View: Displays an order confirmation page once payment is successful.
+
+These views were constructed in such a way that the information required in the custom templates listed in the section below had all of the information from the backend required to display it in a useful way for the user when the page loads.
+
+The passing of data to the templates from the views also played a big part in ensuring users only saw information that was pertinent to them, such as their personal information or address that would not need to be seen by any other user.
+
+### Templates
+
+Django’s templating system was used to create dynamic HTML pages. The project uses a base template that includes common elements such as the header, footer, and navigation menu. Other templates extend this base template to render specific pages:
+
+-	Home Page Template: Includes featured products and navigation to other sections of the site.
+-	Product Detail Template: Displays detailed information about a product, including price, description, and related items.
+-	Cart Template: Shows the items in the user’s cart, with options to update quantities or remove items.
+-	Checkout Template: Provides a form for users to enter their payment and shipping information.
+-	Order Success Template: Confirms the user’s order and provides a summary of their purchase.
+
+These templates were created by myself in order for the site to have a unique feel. It also ensured that the look and feel of the elements within the pages were reflected across the whole site.
+
+Django template logic is brilliant at taking a small section of HTML code and multiplying based on how many entries are within an Object or List passed from the view through the use of for loops.
+
+This allowed me to create a small import HTML template for a product, and then duplicate it across the page for each product that is passed from the view.
+
+Many conditional statements were used to ensure the data shown reflects the current states of products, such as displaying a reduced price if the product was on discount.
+
+### Forms
+
+Django forms.py files were also used in order to create data compliant forms that could be defined using Python and displayed within the respective web pages, passed from the views.py file in the respective app.
+
+This ensured that the data that was inputted by the user was cross checked with the models to ensure there was data compliance and no issues would arise in the future.
 
 ## Deployment
 
