@@ -798,6 +798,12 @@ To store media files on AWS S3, follow these steps:
    heroku open
    ```
 
+##### Ensure DEBUG is set to FALSE
+
+Once you have tested the site and are happy with it, ensure the the Heroku config var for **DEBUG** is set to false as shown in the screenshot below. This ensures that the default Django error handling is used instead of showing DEBUG information that may contain secret keys or other information you wish for users not to see.
+
+<img src='./testing/config-var.png'>
+
 The Django application should now be successfully deployed on Heroku and configured to use AWS S3 for media file storage.
 
 ## Credits
