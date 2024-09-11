@@ -162,3 +162,23 @@ h1 {
   width: 30%;
   margin: 0 auto;
 }
+
+.edit-product{
+  padding: 2rem;
+
+}
+
+.edit-product textarea {
+  width: 100%;
+}
+
+.product-management{
+  padding: 2rem;
+}
+
+.add-product {
+  display: flex;
+  gap: 1rem;
+  width: fit-content;
+  margin: 0 auto;
+}

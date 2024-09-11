@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+{% load currency %}
+{% load custom_filters %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
+
+{% block page_header %}
+<h1 class='text-center'>Product Management</h1>
+{% endblock %}
+
+{% block content %}
+<div class='product-management'>
+  <div class='add-product'>
+  <a href="{% url 'add_product' 'ram' %}">Add New RAM</a>
+  <a href="{% url 'add_product' 'psu' %}">Add New PSU</a>
+  <a href="{% url 'add_product' 'gpu' %}">Add New GPU</a>
+  <a href="{% url 'add_product' 'case' %}">Add New Case</a>
+  <a href="{% url 'add_product' 'storage' %}">Add New Storage</a>
+  </div>
+<ul>
+  {% for product in products %}
+    <li>{{ product.name }} - <a href="{% url 'edit_product' product.id %}">Edit</a> | <a href="{% url 'delete_product' product.id %}">Delete</a></li>
+  {% endfor %}
+</ul>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{% endblock %}

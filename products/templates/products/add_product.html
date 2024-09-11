@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+{% load currency %}
+{% load custom_filters %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'products/css/products.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class='edit-product'>
+<h1>
+    {% if product %}
+        {{ product.name }}
+    {% else %}
+        Add New Product
+    {% endif %}
+</h1><form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Save</button>
+</form>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{% endblock %}
