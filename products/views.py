@@ -84,12 +84,12 @@ def product_list(request):
 def add_product(request, product_type):
     form = None
     category_map = {
-        'motherboard': 'Motherboard',
-        'cpu': 'CPU',
+        'motherboard': 'Motherboards',
+        'cpu': 'CPUs',
         'ram': 'RAM',
-        'psu': 'PSU',
-        'gpu': 'GPU',
-        'case': 'Case',
+        'psu': 'PSUs',
+        'gpu': 'GPUs',
+        'case': 'Cases',
         'storage': 'Storage',
     }
 

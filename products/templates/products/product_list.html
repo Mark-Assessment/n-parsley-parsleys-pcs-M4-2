@@ -14,11 +14,13 @@
 {% block content %}
 <div class='product-management'>
   <div class='add-product'>
-  <a href="{% url 'add_product' 'ram' %}">Add New RAM</a>
-  <a href="{% url 'add_product' 'psu' %}">Add New PSU</a>
-  <a href="{% url 'add_product' 'gpu' %}">Add New GPU</a>
-  <a href="{% url 'add_product' 'case' %}">Add New Case</a>
-  <a href="{% url 'add_product' 'storage' %}">Add New Storage</a>
+    <a href="{% url 'add_product' 'motherboard' %}">Add New Motherboard</a>
+    <a href="{% url 'add_product' 'cpu' %}">Add New CPU</a>
+    <a href="{% url 'add_product' 'ram' %}">Add New RAM</a>
+    <a href="{% url 'add_product' 'psu' %}">Add New PSU</a>
+    <a href="{% url 'add_product' 'gpu' %}">Add New GPU</a>
+    <a href="{% url 'add_product' 'case' %}">Add New Case</a>
+    <a href="{% url 'add_product' 'storage' %}">Add New Storage</a>
   </div>
 <ul>
   {% for product in products %}
